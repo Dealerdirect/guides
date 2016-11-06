@@ -21,8 +21,9 @@
     "lint:alex": "alex",
     "lint:remark": "remark .",
     "lint:spellcheck": "mdspell --report --en-us --ignore-numbers --ignore-acronyms *.md",
-    "lint": "npm-run-all -l -p lint:**",
-    "test": "npm run lint"
+    "lint:spellcheck-interactive": "mdspell --en-us --ignore-numbers --ignore-acronyms *.md",
+    "lint": "npm run lint:alex && npm run lint:remark && npm run lint:spellcheck-interactive",
+    "test": "npm run lint:alex && npm run lint:remark && npm run lint:spellcheck"
   },
   "repository": {
     "type": "git",
