@@ -1,0 +1,33 @@
+{
+  "name": "dealerdirect-guides",
+  "version": "0.1.0",
+  "description": "Dealerdirect guides for getting things done, be a programming hero, code in style and being the better colleague.",
+  "keywords": [
+    "dealerdirect",
+    "guides"
+  ],
+  "author": "Franck Nijhof <f.nijhof@dealerdirect.nl>",
+  "homepage": "https://github.com/dealerdirect/guides",
+  "license": "MIT",
+  "dependencies": {
+    "alex": "^4.0.1",
+    "markdown-spellcheck": "^0.11.0",
+    "remark-cli": "^2.1.0",
+    "remark-lint": "^5.2.0",
+    "remark-preset-lint-dealerdirect": "^0.1.0",
+    "remark-validate-links": "^5.0.0"
+  },
+  "scripts": {
+    "lint:alex": "alex",
+    "lint:remark": "remark .",
+    "lint:spellcheck": "mdspell --report --en-us --ignore-numbers --ignore-acronyms *.md",
+    "lint": "npm-run-all -l -p lint:**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dealerdirect/guides.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dealerdirect/guides/issues"
+  }
+}
