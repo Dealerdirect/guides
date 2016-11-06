@@ -22,6 +22,7 @@
     "lint:remark": "remark .",
     "lint:spellcheck": "mdspell --report --en-us --ignore-numbers --ignore-acronyms *.md",
     "lint": "npm-run-all -l -p lint:**"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
