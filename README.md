@@ -1,7 +1,9 @@
 # Dealerdirect: Guides
 
+[![Travis](https://img.shields.io/travis/DealerDirect/guides.svg?style=flat-square)](https://travis-ci.org/DealerDirect/guides)
+![Maintenance](https://img.shields.io/maintenance/yes/2016.svg?style=flat-square)
 ![Awesome](https://img.shields.io/badge/awesome%3F-yes-brightgreen.svg?style=flat-square)
-[![License](https://img.shields.io/github/license/dealerdirect/templates.svg?style=flat-square)](LICENSE.md)
+[![License](https://img.shields.io/github/license/dealerdirect/guides.svg?style=flat-square)](LICENSE.md)
 
 > _“I have a mentor. I have... guides. I have a lot of guides. Not a lot, but people whose opinions I really 
 > respect and who I will turn to.”_ ~ Jake Gyllenhaal
