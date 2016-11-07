@@ -1,10 +1,8 @@
 {
+  "presets": [
+    "remark-preset-lint-dealerdirect"
+  ],
   "plugins": {
-    "lint": {
-      "presets": [
-        "remark-preset-lint-dealerdirect"
-      ]
-    },
     "validate-links": {
     }
   },
