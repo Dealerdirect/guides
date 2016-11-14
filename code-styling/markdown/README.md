@@ -103,7 +103,7 @@ double--hypens.md
 
 - Files MUST only use UTF-8 encoding without BOM.
 
-- Files MUST end with a single blank line.
+- Files MUST end with a single blank line. [^1](#references)
 
 - Lines SHOULD NOT be longer than 120 characters; lines longer SHOULD be split into multiple subsequent lines.
 
@@ -288,7 +288,7 @@ double--hypens.md
   *This text is also printed in italic...*
   ```
 
-- Striketrough MUST NOT be used.
+- Striketrough MUST NOT be used. [^2](#references)
 
 - Uppercase text for emphasis SHOULD NOT be used, use emphasis constructs like **bold** or _italic_ instead.
   The following keywords are excepted from this rule (as defined in [RFC 2119][rfc2119]):
@@ -1128,6 +1128,11 @@ This text is normal **Markdown**.
 This text is normal **Markdown** again.
 ```
 
+## References
+
+1: [No newline at end of file][nonewline] - Mike Burns
+2: [MARKDOWN, STRIKETHROUGH, AND SLACK][strikethrough] - John Gruber
+
 ## License
 
 The MIT License (MIT)
@@ -1153,3 +1158,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 [rfc2119]: http://www.ietf.org/rfc/rfc2119.txt
+[nonewline]: https://robots.thoughtbot.com/no-newline-at-end-of-file
+[strikethrough]: https://daringfireball.net/linked/2015/11/05/markdown-strikethrough-slack
