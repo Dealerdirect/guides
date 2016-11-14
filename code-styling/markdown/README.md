@@ -414,7 +414,7 @@ double--hypens.md
     - First subitem
     - Second subitem
     
-  - Second item
+  - Second level
   ```
   
   _Incorrect example_:
@@ -979,13 +979,13 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   _Correct example_:
   
   ```Markdown
-  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363/)
+  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363)
   ```
   
   _Incorrect example_:
   
   ```Markdown
-  Read [this](https://www.amazon.co.uk/dp/1452818363/) book.
+  Read [this](https://www.amazon.co.uk/dp/1452818363) book.
   ```
 
 - The author MUST not be part of the link, is optional and MUST be separated using a dash (`-`) surrounded by spaces.
@@ -993,16 +993,16 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   _Correct example_:
   
   ```Markdown
-  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363/) - James McNalley
+  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363) - James McNalley
   ```
 
   _Incorrect examples_:
   
   ```Markdown
-  [A Small Book of Random Numbers: Volume 1 by James McNally](https://www.amazon.co.uk/dp/1452818363/)
-  [A Small Book of Random Numbers: Volume 1 - James McNally](https://www.amazon.co.uk/dp/1452818363/)
-  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363/)-James McNalley
-  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363/) James McNalley
+  [A Small Book of Random Numbers: Volume 1 by James McNally](https://www.amazon.co.uk/dp/1452818363)
+  [A Small Book of Random Numbers: Volume 1 - James McNally](https://www.amazon.co.uk/dp/1452818363)
+  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363)-James McNalley
+  [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363) James McNalley
   ```
 
 - In case the link points to a binary version of the book or document, the format MUST be specified between 
