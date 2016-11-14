@@ -1,4 +1,4 @@
-# Dealerdirect Style Guide: Markdown
+# Dealerdirect style guide: Markdown
 
 > _“Life moves so fast. You gotta document the good times, man.”_ ~ Big Boi
 
@@ -128,7 +128,7 @@ double--hypens.md
 
 - A single space MUST be used after sentences, when followed by another sentence.
 
-- A file MUST start with a header on the first line.
+- A file MUST start with a first level header on the first line.
 
 ### 1.3 Language
 
@@ -238,7 +238,7 @@ double--hypens.md
   ### 3.2.1 This header is missing a point
   ```
 
-- Headers define sections. A sections MUST NOT be empty.
+- Headers define sections. A section MUST NOT be empty.
 
   _Correct example_:
   
@@ -298,7 +298,7 @@ double--hypens.md
   _Correct example_:
   
   ```Markdown
-  *Note*: One SHALL NOT emphasis in uppercase.
+  **Note**: One SHALL NOT emphasis in uppercase.
   ```
   
   _Incorrect example_:
@@ -467,7 +467,7 @@ double--hypens.md
 - Each list item MUST have the same case as it would have if
   it were concatenated with the sentence that comes before the list.
 
-  _Correct examples_:
+  _Examples_:
   
   ```Markdown
   I want to eat:
@@ -1063,8 +1063,8 @@ _Examples_:
 - Tables MUST be fenced with pipes (`|`).
 - The table opening pipe (`|`) MUST be followed by a space character.
 - The table closing pipe (`|`) MUST be preceded by a space character.
-- Table header and body MUST be separated using at least trhee hyphens (`---`), wider column MUST match column width.
-- Pipe characters, delimiting columns, must be preceded and followed by a space characte
+- Table header and body MUST be separated using at least three hyphens (`---`), wider column MUST match column width.
+- Pipe characters, delimiting columns, MUST be preceded and followed by a space character.
 - All pipe characters in a table MUST be align vertically.
 - Column width SHALL be determined by the longest cell in the column.
 
