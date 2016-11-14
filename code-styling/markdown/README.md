@@ -1130,8 +1130,9 @@ This text is normal **Markdown** again.
 
 ## References
 
-1: [No newline at end of file][nonewline] - Mike Burns
-2: [MARKDOWN, STRIKETHROUGH, AND SLACK][strikethrough] - John Gruber
+^1: [No newline at end of file][nonewline] - Mike Burns
+
+^2: [MARKDOWN, STRIKETHROUGH, AND SLACK][strikethrough] - John Gruber
 
 ## License
 
