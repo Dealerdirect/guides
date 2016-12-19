@@ -3,7 +3,7 @@
 [![Travis][travis-shield]][travis]
 ![Maintenance][maintenance-shield]
 ![Awesome][awesome-shield]
-[![License][license-shield](LICENSE.md)
+[![License][license-shield]](LICENSE.md)
 
 > _“I have a mentor. I have... guides. I have a lot of guides. Not a lot,
 > but people whose opinions I really respect and who I will turn to.”_
