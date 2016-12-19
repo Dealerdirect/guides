@@ -110,7 +110,7 @@ double--hypens.md
   longer lines SHOULD be split into multiple subsequent lines.
 
 - It is RECOMMENDED to break large paragraphs logically when trying to keep
-  lines under 120 characters:
+  lines under 80 characters:
 
   <!--alex ignore period-->
   - _sentences_: after a period (`.`), question (`?`) or exclamation mark (`!`)
