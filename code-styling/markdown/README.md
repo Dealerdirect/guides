@@ -109,8 +109,6 @@ double--hypens.md
 - Lines SHOULD be less than 80 characters and MUST be less than 120 characters;
   longer lines SHOULD be split into multiple subsequent lines.
 
-- Lines MUST be less than 120 characters.
-
 - It is RECOMMENDED to break large paragraphs logically when trying to keep
   lines under 120 characters:
 
