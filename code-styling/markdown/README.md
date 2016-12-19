@@ -65,6 +65,7 @@ interpreted as described in [RFC 2119][rfc2119].
 - It is RECOMMENDED to base filenames on the top-header level title.
 
 - Filenames MUST be lowercase, unless it is one of the following:
+
   - `README.md`
   - `LICENSE.md`
   - `CONTRIBUTING.md`
@@ -82,7 +83,7 @@ interpreted as described in [RFC 2119][rfc2119].
 
 Good filenames:
 
-```
+```txt
 markdown-style-guide.md
 introduction-into-coding.md
 hello-world.md
@@ -90,7 +91,7 @@ hello-world.md
 
 Bad filenames:
 
-```
+```txt
 .markdown-style.guide.md
 -introduction-into-coding.md
 the-hello-world-example.md
@@ -105,22 +106,26 @@ double--hypens.md
 
 - Files MUST end with a single blank line. [^1](#references)
 
-- Lines SHOULD NOT be longer than 120 characters; lines longer SHOULD be split into multiple subsequent lines.
+- Lines SHOULD be less than 80 characters and MUST be less than 120 characters;
+  longer lines SHOULD be split into multiple subsequent lines.
 
-- It is RECOMMENDED to break large paragraphs logically when trying to keep lines under 120 characters:
+- It is RECOMMENDED to break large paragraphs logically when trying to keep
+  lines under 80 characters:
+
   <!--alex ignore period-->
   - _sentences_: after a period (`.`), question (`?`) or exclamation mark (`!`)
   - _clauses_: after words like `and`, `which`, `if` ... `then`, commas (`,`)
 
 - Lines SHOULD NOT be split into multiple line using word-breaks.
 
-- Consecutive blank lines MUST NOT exists, with the exception of code blocks where the code style guide for the coding 
-  language applies.
+- Consecutive blank lines MUST NOT exists, with the exception of code blocks
+  where the code style guide for the coding language applies.
 
 - There MUST NOT be trailing whitespace at the end of non-blank lines unless
   it has a function such as indicating a line break.
 
-- In the rare case a line break is absolutely needed, one SHALL end the line with exactly two spaces.
+- In the rare case a line break is absolutely needed, one SHALL end the line 
+  with exactly two spaces.
 
 - There MUST NOT be trailing whitespace at the end of blank lines.
 
@@ -137,8 +142,8 @@ double--hypens.md
 
 - Spelling and grammar MUST be correct.
 
-- Files SHOULD NOT contain gender favoring, polarizing, race related, religion inconsiderate, or
-  other unequal phrasing in its text.
+- Files SHOULD NOT contain gender favoring, polarizing, race related, religion
+  inconsiderate, or other unequal phrasing in its text.
 
 ## 2. Headings
 
@@ -186,9 +191,11 @@ double--hypens.md
   ### Next level header
   ```
 
-- The first letter of a header MUST be upper case, unless it is a word that always starts with lowercase letters.
+- The first letter of a header MUST be upper case, unless it is a word that
+  always starts with lowercase letters.
 
-- The other letters SHOULD have the same case they would have in the middle of a sentence.
+- The other letters SHOULD have the same case they would have in the middle of
+  a sentence.
 
   _Correct examples_:
   
@@ -257,7 +264,7 @@ double--hypens.md
 
   ### 3.2.2. The start of the second section
   ```
-  
+
 ## 3. Emphasis
 
 - Bold text MUST use the double asterisk (`**`) format.
@@ -290,8 +297,10 @@ double--hypens.md
 
 - Striketrough MUST NOT be used. [^2](#references)
 
-- Uppercase text for emphasis SHOULD NOT be used, use emphasis constructs like **bold** or _italic_ instead.
-  The following keywords are excepted from this rule (as defined in [RFC 2119][rfc2119]):
+- Uppercase text for emphasis SHOULD NOT be used, use emphasis constructs like
+  **bold** or _italic_ instead. The following keywords are excepted from this
+  rule (as defined in [RFC 2119][rfc2119]):
+
   > "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
   > "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL"
 
@@ -307,7 +316,8 @@ double--hypens.md
   NOTE: IT IS NOT RECOMMENDED TO DO THIS!
   ```
 
-- Emphasis constructs SHOULD NOT be used to introduce a multi line named section: use headers instead.
+- Emphasis constructs SHOULD NOT be used to introduce a multi line named
+  section: use headers instead.
 
 ## 4. Blockquotes
 
@@ -320,13 +330,15 @@ double--hypens.md
   ```Markdown
   > This is a pretty nice blockquote :)
   ```
+
   _Incorrect example_:
   
   ```Markdown
   >This blockquote is lacking some space.
   ```
 
-- Consecutive lines within a blockquote MUST also start with the greather-than (`>`) character.
+- Consecutive lines within a blockquote MUST also start with the greather-than
+  (`>`) character.
 
   _Correct example_:
   
@@ -334,6 +346,7 @@ double--hypens.md
   > I told my wife she was drawing her eyebrows too high.
   > She looked surprised.
   ```
+
   _Incorrect example_:
   
   ```Markdown
@@ -404,7 +417,8 @@ double--hypens.md
     - Cheese
   ```
 
-- Subitems of a list MUST be indented by 2 spaces and MUST be preceded and followed by a newline.
+- Subitems of a list MUST be indented by 2 spaces and MUST be preceded and
+  followed by a newline.
 
   _Correct example_:
   
@@ -426,7 +440,8 @@ double--hypens.md
   - Second level
   ```
 
-- When one or more items in a list spans more than one line, the list is REQUIRED to have newlines between each item. 
+- When one or more items in a list spans more than one line, the list is
+  REQUIRED to have newlines between each item. 
 
   _Correct example_:
   
@@ -489,9 +504,10 @@ double--hypens.md
   This is because one would say: "How to ride a bike. Get on top of the bike."
   ```
 
-- A list item MUST be punctuated if either it contains multiple sentences, paragraphs or
-  <!--alex ignore period-->
-  starts with an upper case letter. The punctuation MUST BE omitted if it would be a period (`.`).
+<!--alex ignore period-->
+- A list item MUST be punctuated if either it contains multiple sentences,
+  paragraphs or starts with an upper case letter. The punctuation MUST BE
+  omitted if it would be a period (`.`).
 
   _Correct examples_:
   
@@ -545,11 +561,13 @@ double--hypens.md
 
 ### 5.2. Ordered lists
 
-- It is RECOMMENDED to use unordered lists unless you intent to refer to items by their number.
+- It is RECOMMENDED to use unordered lists unless you intent to refer to items
+  by their number.
 
 - Ordered list MUST increment by one, relative to the starting point.
 
-- Ordered list markers MUST be followed by a point (`.`) character and a space character.
+- Ordered list markers MUST be followed by a point (`.`) character and a space
+  character.
 
   _Correct example_:
   
@@ -581,7 +599,8 @@ double--hypens.md
 
 ### 5.3. Task lists
 
-- It is RECOMMENDED to use unordered lists for tasks list unless you intent to refer to items by their number.
+- It is RECOMMENDED to use unordered lists for tasks list unless you intent to
+  refer to items by their number.
 
 - Task checkbox MUST use the opening bracket (`[`) and closing bracket (`]`) characters.
 
@@ -601,6 +620,7 @@ double--hypens.md
   ```
   
   _Incorrect example_:
+
   ```Markdown
   Todo:
   
@@ -645,8 +665,9 @@ This is an example of a horizontal rule.
   Please use ` apt-get ` to install packages on your Debian system.
   ```
 
-- Inline code containing backticks MAY use double backticks (``` `` ```) and in really rare cases the inline code
-  contains double backticks, triple backticks (```` ``` ````) MAY be used.
+- Inline code containing backticks MAY use double backticks (``` `` ```) and in
+  really rare cases the inline code contains double backticks,
+  triple backticks (```` ``` ````) MAY be used.
 
   _Example_:
   
@@ -708,7 +729,8 @@ This is an example of a horizontal rule.
 
 - There MUST NOT be spacing between the backticks and the language flag.
 
-- When the code block is used to display monospaced text, `txt` MUST be used as the language flag.
+- When the code block is used to display monospaced text, `txt` MUST be used as
+  language flag.
 
   _Correct example_:
   
@@ -718,8 +740,8 @@ This is an example of a horizontal rule.
       ```
   ```
 
-- Shell code MUST NOT be prefixed with a dollar character (`$`), unless you will be showing the command output on
-  the same code block.
+- Shell code MUST NOT be prefixed with a dollar character (`$`), unless you will
+  be showing the command output on the same code block.
 
   _Correct example_:
   
@@ -745,8 +767,10 @@ This is an example of a horizontal rule.
 
 - Code inside a code block MUST NOT be indented.
 
-_Note_: Code blocks shown inside the above code block examples are indented. Even tough this is against the rules in
-this guide, it is the only way of displaying a Markdown fenced code block inside a Markdown fenced code block.
+_Note_: Code blocks shown inside the above code block examples are indented.
+        Even tough this is against the rules in this guide, it is the only way
+        of displaying a Markdown fenced code block inside a Markdown fenced
+        code block.
 
 ## 8. Links
 
@@ -772,8 +796,9 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
 
 ### 8.1. Inline links
 
-- Inline links SHOULD only be used for internal links and SHOULD NOT be used for external links, unless you are trying
-  to represent a list of links (e.g. A book list).
+- Inline links SHOULD only be used for internal links and SHOULD NOT be used
+  for external links, unless you are trying to represent a list of links
+  (e.g. A book list).
 
 - The link itself MUST be wrapped into parentheses (`(`, `)`).
 
@@ -783,7 +808,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [See the contributing guide for more info](/CONTRIBUTING.md)
   ```
 
-- There MUST NOT be spacing between brackets of the link text and the parentheses containing the link.
+- There MUST NOT be spacing between brackets of the link text and
+  the parentheses containing the link.
 
   _Correct example_:
   
@@ -797,7 +823,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [See the contributing guide for more info] (/CONTRIBUTING.md)
   ```
 
-- Link titles MUST be surrounded double quotes (`"`), with a space between the link and the link title.
+- Link titles MUST be surrounded double quotes (`"`), with a space between
+  the link and the link title.
 
   _Correct example_:
   
@@ -813,7 +840,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
 
 ### 8.2. Reference links
 
-- Reference links SHOULD only be used for external links and SHOULD NOT be used for internal links.
+- Reference links SHOULD only be used for external links and SHOULD NOT be used
+  for internal links.
 
 - The reference label MUST be delimited by square brackets and MUST NOT be omitted.
 
@@ -843,7 +871,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [Visit Google] [google]
   ```
 
-- In case the link text equals the reference label, the contents of the reference label SHOULD be omitted.
+- In case the link text equals the reference label, the contents of
+  the reference label SHOULD be omitted.
 
   _Correct example_:
   
@@ -872,7 +901,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [Visit Google][Google]
   ```
 
-- A reference link label MUST match a reference link definition. Undefined references are not allowed.
+- A reference link label MUST match a reference link definition.
+  Undefined references are not allowed.
 
   _Correct example_:
   
@@ -888,7 +918,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [Google][google]
   ```
 
-- The reference link definition MUST be delimited by square brackets, followed by semicolon (`:`) and a space.
+- The reference link definition MUST be delimited by square brackets,
+  followed by semicolon (`:`) and a space.
 
   _Correct example_:
   
@@ -904,7 +935,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [google] : http://www.google.com
   ```
 
-- Link titles MUST be surrounded double quotes (`"`), with a space between the link and the link title.
+- Link titles MUST be surrounded double quotes (`"`),
+  with a space between the link and the link title.
 
   _Correct example_:
   
@@ -933,7 +965,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
 
 ### 8.3. Automatic links
 
-- Automatic links MUST be enclosed inside less-than (`<`) and greater-than (`>`) characters.
+- Automatic links MUST be enclosed inside less-than (`<`) and
+  greater-than (`>`) characters.
 
   _Example_:
   
@@ -951,6 +984,7 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   ```
   
   _Incorrect examples_:
+
   ```Markdown
   <www.google.com>
   <opensource@dealerdirect.nl>
@@ -988,7 +1022,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   Read [this](https://www.amazon.co.uk/dp/1452818363) book.
   ```
 
-- The author MUST not be part of the link, is optional and MUST be separated using a dash (`-`) surrounded by spaces.
+- The author MUST not be part of the link, is optional and MUST be separated
+  using a dash (`-`) surrounded by spaces.
 
   _Correct example_:
   
@@ -1005,8 +1040,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363) James McNalley
   ```
 
-- In case the link points to a binary version of the book or document, the format MUST be specified between 
-  parentheses (`(`, `)`).
+- In case the link points to a binary version of the book or document,
+  the format MUST be specified between parentheses (`(`, `)`).
   
   _Correct examples_:
   
@@ -1022,8 +1057,8 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [Code Connected Volume 1](http://hintjens.wdfiles.com/local--files/main:files/cc1pe.pdf) - Pieter Hintjens(PDF)
   ```
 
-- If the book or document is available in multiple formats, it is RECOMMENDED to add linked additional formats in the
-  format specification.
+- If the book or document is available in multiple formats, it is RECOMMENDED to
+  add linked additional formats in the format specification.
   
   _Correct example_:
   
@@ -1037,12 +1072,16 @@ this guide, it is the only way of displaying a Markdown fenced code block inside
   [A Unix Person's Guide to PowerShell][powershellpdf] - Matt Penny (PDF)
   [A Unix Person's Guide to PowerShell][powershellepub] - Matt Penny (ePub)
   ```
-  
+
 ## 9. Images
 
-- Images MUST follow the same syntax as links, but preceded with an exclamation (`!`) character.
+- Images MUST follow the same syntax as links, 
+  but preceded with an exclamation (`!`) character.
+
 - Images MUST follow all same rules as links.
+
 - Links to internal images MUST use the inline link style and use relative paths.
+
 - Links to external images MUST use the reference link style.
 
 _Examples_:
@@ -1059,13 +1098,23 @@ _Examples_:
 ## 10. Tables
 
 - Tables MUST NOT be indent, unless the table is placed inside a list.
+
 - Tables MUST be preceded and followed by a newline.
+
 - Tables MUST be fenced with pipes (`|`).
+
 - The table opening pipe (`|`) MUST be followed by a space character.
+
 - The table closing pipe (`|`) MUST be preceded by a space character.
-- Table header and body MUST be separated using at least three hyphens (`---`), wider column MUST match column width.
-- Pipe characters, delimiting columns, MUST be preceded and followed by a space character.
+
+- Table header and body MUST be separated using at least three hyphens (`---`),
+  wider column MUST match column width.
+
+- Pipe characters, delimiting columns, MUST be preceded and
+  followed by a space character.
+
 - All pipe characters in a table MUST be align vertically.
+
 - Column width SHALL be determined by the longest cell in the column.
 
 _Correct example_:
@@ -1088,7 +1137,8 @@ bananas | a dozen | $12
 grapes | one | $1
 ```
 
-- Tables column contents MAY be aligned using the semicolon (`:`) in the body and header separator.
+- Tables column contents MAY be aligned using the semicolon (`:`)
+  in the body and header separator.
 
   _Example_:
   
@@ -1102,11 +1152,12 @@ grapes | one | $1
 
 ## 11. Emoji
 
-- It is RECOMMENDED to use emoji, they help convey tone and intent, both of which are frequently lost in translation
-  when communicating online.
+- It is RECOMMENDED to use emoji, they help convey tone and intent,
+  both of which are frequently lost in translation when communicating online.
 
-- In order to maintain maximum compatibility with different platform, used emoji MUST be listed on the emoji cheat 
-  sheet, found on the following URL:
+- In order to maintain maximum compatibility with different platform, 
+  used emoji MUST be listed on the emoji cheat sheet,
+  found on the following URL:
 
   <http://www.emoji-cheat-sheet.com>
 
