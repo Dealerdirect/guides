@@ -21,7 +21,7 @@
     "remark-validate-links": "^5.0.0"
   },
   "scripts": {
-    "lint:alex": "alex",
+    "lint:alex": "alex .",
     "lint:remark": "remark -f .",
     "lint:spellcheck": "find . -type f -name '*.md' -not -path './node_modules/*' -print0 | xargs -0 -n1 mdspell --report --en-us --ignore-numbers --ignore-acronyms",
     "lint:spellcheck-interactive": "find . -type f -name '*.md' -not -path './node_modules/*' -print0 | xargs -0 -n1 mdspell --en-us --ignore-numbers --ignore-acronyms",
