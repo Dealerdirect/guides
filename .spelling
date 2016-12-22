@@ -19,6 +19,7 @@ rubocop
 B.V.
 sublicense
 workingatdealerdirect.eu
+Javascript
 
 - ./README.md
 Gyllenhaal
@@ -29,6 +30,9 @@ thoughbot
 sexualized
 opensource
 dealerdirect.nl.
+
+- ./code-styling/javascript/README.md
+Airbnb
 
 - ./code-styling/markdown/README.md
 Boi
