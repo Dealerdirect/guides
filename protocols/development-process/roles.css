@@ -1,0 +1,63 @@
+<style>
+    .role {
+        background-color: lightgray;
+        border: 1px solid;
+        border-top-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        padding: 0.1em 0.65em;
+        color: white;
+        -text-shadow:  0 0 3px black, 0 0 2px black, 0 0 1px black;
+    }
+
+    .role-end-user {
+        background-color: #FFF;
+        color: black;
+    }
+
+    .role-product-owner {
+        background-color: #E5493A;
+        border-color: #E5493A;
+    }
+
+    .role-scrum-master {
+        background-color: #63BA3C;
+        border-color: #63BA3C;
+    }
+
+    .role-stakeholder {
+        background-color: #FF9C23;
+        border-color: #FF9C23;
+    }
+
+    .role-graphic-designer {
+        background-color: #A5FFFF;
+        border-color: #A5FFFF;
+        color: #777;
+      }
+
+    .role-ux {
+      background-color: #FF2BC2;
+      border-color: #FF2BC2;
+    }
+
+    .role-developer {
+      background-color: #4BADE8;
+      border-color: #4BADE8;
+    }
+
+    .role-programmer{
+        background-color: #205081;
+        border-color: #205081;
+    }
+
+    .role-quality-assurance {
+        background-color: #904EE2;
+        border-color: #904EE2;
+    }
+
+    div > ul .role {
+        margin: 0.35em 0;
+        list-style-type: none;
+        display: inline-block;
+    }
+</style>
