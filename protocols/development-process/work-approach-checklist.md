@@ -6,7 +6,7 @@ permalink: /protocols/development-process/work-approach-checklist.html
 
 # Work approach checklist
 
-* auto-gen TOC:
+- auto-gen TOC:
 {:toc}
 
 ## Introduction
