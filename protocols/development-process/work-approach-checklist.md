@@ -1,6 +1,13 @@
+---
+permalink: /protocols/development-process/work-approach-checklist.html
+---
+
 <link rel="stylesheet" href="roles.css" />
 
 # Work approach checklist
+
+* auto-gen TOC:
+{:toc}
 
 ## Introduction
 
@@ -48,8 +55,8 @@ clear what problem the idea addresses.
 The product owner should be able to summarize the goal in one or two sentences.
 
 Any relevant information should be gathered together in an IDEA ticket. The
-content of the ticket should be clear, without explaining it in person. Once the 
-ticket is clear it should be validated by the stake-holder to make sure the 
+content of the ticket should be clear, without explaining it in person. Once the
+ticket is clear it should be validated by the stake-holder to make sure the
 ticket represents their reality.
 
 _Responsibility of_: <span class="role role-stakeholder">Stakeholder</span>
@@ -74,7 +81,7 @@ _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 ### 3. **What is the impact of the idea on the current system❔**
 
 If the idea is user-facing, how will the user be impacted? Does it pertain to
-Consumers, Dealers, Employees? Does the UI have to be changed? Will changes have 
+Consumers, Dealers, Employees? Does the UI have to be changed? Will changes have
 an impact on the user experience?
 
 If the idea is mostly machine facing, how does it impact the existing stack?
