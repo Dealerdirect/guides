@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The following constitutes the checklist that should become the natural way to
+The following constitutes a checklist that should become the natural way to
 resolve issues. It is intended to be exhaustive, so as to cover each base.
 
 It should be noted that often not all steps are applicable for successfully
@@ -45,13 +45,12 @@ When an <span class="role role-end-user">End User</span> or stakeholder has
 the idea that something should be changed or added to the system, it should be
 clear what problem the idea addresses.
 
-The product owner should be able to summarize the goal should in one or two
-sentences.
+The product owner should be able to summarize the goal in one or two sentences.
 
 Any relevant information should be gathered together in an IDEA ticket. The
-content of the ticket should be clear, without explaining it in person. This
-can be validated with the Scrum Master. Once the ticket is clear it should be
-validated by the stake-holder to make sure the ticket represents their reality.
+content of the ticket should be clear, without explaining it in person. Once the 
+ticket is clear it should be validated by the stake-holder to make sure the 
+ticket represents their reality.
 
 _Responsibility of_: <span class="role role-stakeholder">Stakeholder</span>
 
@@ -75,11 +74,11 @@ _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 ### 3. **What is the impact of the idea on the current system❔**
 
 If the idea is user-facing, how will the user be impacted? Does it pertain to
-Consumers, Dealers, Employees? Does the UI have to be changed? Will import
-have an impact on the user experience?
+Consumers, Dealers, Employees? Does the UI have to be changed? Will changes have 
+an impact on the user experience?
 
 If the idea is mostly machine facing, how does it impact the existing stack?
-Will systems communication be influenced? Do API need to change?
+Will systems communication be influenced? Do API's need to change?
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
@@ -183,7 +182,7 @@ _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
 ### 9. **Can a high-level description be created❔**
 
-Once all relevant deliverables have been added to story ticket, work on the
+Once all relevant deliverables have been added to the story ticket, work on the
 issue can be planned.
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
