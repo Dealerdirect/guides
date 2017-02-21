@@ -1163,7 +1163,7 @@ grapes | one | $1
 
 ## 12. HTML
 
-- One SHOULD NOT not to use HTML, unless this is absolutely necessary.
+- One SHOULD NOT use HTML, unless this is absolutely necessary.
 - The HTML code MUST be preceded and followed by a newline.
 - Markdown MUST NOT be used inside the HTML, use plain HTML instead.
 
