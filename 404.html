@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /404.html
+sitemap: false
+title: 404 - Page Not Found
+---
+
+{% assign entries = site.pages | sort: 'url' %}
+
+<h1>That page does not seem to exist.</h1>
+
+<p>Please visit one of the following pages:</p>
+
+<ul>
+  {% for entry in entries %}
+    {% if entry.url != '/404.html' and entry.url != '/sitemap.xml' and entry.url != '/robots.txt' %}
+      <li>
+        <a href="/{{ entry.url | prepend: site.github.project_title }}">
+          {{ entry.url }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<hr>
+

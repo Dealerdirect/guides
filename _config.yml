@@ -1,0 +1,17 @@
+timezone: Europe/Amsterdam
+
+exclude: [Gemfile, Gemfile.lock, bin/, node_modules]
+
+baseurl: /guides
+
+# permalink: pretty # @NOTE: This will break (image) links
+
+webrick:
+  headers:
+    # For more information on the Clacks header see: http://www.gnuterrypratchett.com/#apache
+    X-Clacks-Overhead: GNU Terry Pratchett
+
+gems:
+  - jemoji # see https://help.github.com/articles/emoji-on-github-pages/
+  - jekyll-mentions # see https://help.github.com/articles/mentions-on-github-pages/
+  - jekyll-sitemap  # see https://help.github.com/articles/sitemaps-for-github-pages/
