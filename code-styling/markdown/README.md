@@ -112,8 +112,7 @@ double--hypens.md
 - It is RECOMMENDED to break large paragraphs logically when trying to keep
   lines under 80 characters:
 
-  <!--alex ignore period-->
-  - _sentences_: after a period (`.`), question (`?`) or exclamation mark (`!`)
+  - _sentences_: after a dot (`.`), question (`?`) or exclamation mark (`!`)
   - _clauses_: after words like `and`, `which`, `if` ... `then`, commas (`,`)
 
 - Lines SHOULD NOT be split into multiple line using word-breaks.
@@ -124,7 +123,7 @@ double--hypens.md
 - There MUST NOT be trailing whitespace at the end of non-blank lines unless
   it has a function such as indicating a line break.
 
-- In the rare case a line break is absolutely needed, one SHALL end the line 
+- In the rare case a line break is absolutely needed, one SHALL end the line
   with exactly two spaces.
 
 - There MUST NOT be trailing whitespace at the end of blank lines.
@@ -137,8 +136,7 @@ double--hypens.md
 
 ### 1.3 Language
 
-<!--alex ignore american-->
-- The language MUST be English, and in particular American English.
+- The language MUST be English, and in particular United States English.
 
 - Spelling and grammar MUST be correct.
 
@@ -152,18 +150,18 @@ double--hypens.md
 - There MUST be a single space between the hash (`#`) character and the header text.
 
   _Correct example_:
-  
+
   ```Markdown
   # This is a correct header
   ```
-  
+
   _Incorrect examples_:
-  
+
   ```Markdown
   #This one is not correct
-  
+
   # This one if also not correct #
-  
+
   Neither is this header
   ----------------------
   ```
@@ -176,18 +174,18 @@ double--hypens.md
 - Headers MUST NOT increase by more than one "level" from one header to the next.
 
   _Correct example_:
-  
+
   ```Markdown
   # First level header
-  
+
   ## Next level header
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   # First level header
-  
+
   ### Next level header
   ```
 
@@ -198,17 +196,17 @@ double--hypens.md
   a sentence.
 
   _Correct examples_:
-  
+
   ```Markdown
   # This is a correct example of a header text
   ```
-  
+
   ```Markdown
   # int main
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   # This is an Incorrect Example
   ```
@@ -216,13 +214,13 @@ double--hypens.md
 - Headers MUST NOT end with a punctuation character (`.`, `,`, `!`, `?`, `:`, `;`)
 
   _Correct example_:
-  
+
   ```Markdown
   # How to install this software
   ```
 
   _Incorrect examples_:
-  
+
   ```Markdown
   # How to install this software:
   ```
@@ -234,13 +232,13 @@ double--hypens.md
 - Numbered headers MUST be followed by a point (`.`) character after the number.
 
   _Correct example_:
-  
+
   ```Markdown
   ### 3.2.1. This header is numbered correctly
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   ### 3.2.1 This header is missing a point
   ```
@@ -248,17 +246,17 @@ double--hypens.md
 - Headers define sections. A section MUST NOT be empty.
 
   _Correct example_:
-  
+
   ```Markdown
   ### 3.2.1. This it the first section
-  
+
   Lorem ipsum is great for this purpose!
-  
+
   ### 3.2.2. The start of the second section
   ```
 
   _Incorrect example_:
-  
+
   ```Markdown
   ### 3.2.1. This it the first section
 
@@ -268,29 +266,29 @@ double--hypens.md
 ## 3. Emphasis
 
 - Bold text MUST use the double asterisk (`**`) format.
-  
+
   _Correct example_:
 
   ```Markdown
   **This text is printed in bold!**
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   __This text is also printed in bold...__
   ```
 
 - Italic text MUST use the underscore (`_`) format.
-  
+
   _Correct example_:
 
   ```Markdown
   _This text is printed in italic!_
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   *This text is also printed in italic...*
   ```
@@ -305,13 +303,13 @@ double--hypens.md
   > "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL"
 
   _Correct example_:
-  
+
   ```Markdown
   **Note**: One SHALL NOT emphasis in uppercase.
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   NOTE: IT IS NOT RECOMMENDED TO DO THIS!
   ```
@@ -326,13 +324,13 @@ double--hypens.md
 - The greater-than character MUST be followed by a single space.
 
   _Correct example_:
-  
+
   ```Markdown
   > This is a pretty nice blockquote :)
   ```
 
   _Incorrect example_:
-  
+
   ```Markdown
   >This blockquote is lacking some space.
   ```
@@ -341,14 +339,14 @@ double--hypens.md
   (`>`) character.
 
   _Correct example_:
-  
+
   ```Markdown
   > I told my wife she was drawing her eyebrows too high.
   > She looked surprised.
   ```
 
   _Incorrect example_:
-  
+
   ```Markdown
   > I tried to catch fog yesterday.
   Mist.
@@ -357,18 +355,18 @@ double--hypens.md
 - Empty lines within a blockquote MUST use the greater-than (`>`) characater.
 
   _Correct example_:
-  
+
   ```Markdown
   > Parallel lines have so much in common.
   >
   > It's a shame they'll never meet.
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   > You're not completely useless...
-  
+
   > You can always serve as a bad example.
   ```
 
@@ -377,17 +375,17 @@ double--hypens.md
 - Lists MUST be preceded and followed by a newline.
 
   _Correct example_:
-  
+
   ```Markdown
   Shopping list:
-  
+
   - Milk
   - Bread
   - Cheese
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   Shopping list:
   - Milk
@@ -398,20 +396,20 @@ double--hypens.md
 - The first level of items in a list MUST NOT be indented.
 
   _Correct example_:
-  
+
   ```Markdown
   Shopping list:
-  
+
   - Milk
   - Bread
   - Cheese
   ```
 
   _Incorrect example_:
-  
+
   ```Markdown
   Shopping list:
-  
+
     - Milk
     - Bread
     - Cheese
@@ -421,18 +419,18 @@ double--hypens.md
   followed by a newline.
 
   _Correct example_:
-  
+
   ```Markdown
   - First level
-  
+
     - First subitem
     - Second subitem
-    
+
   - Second level
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   - First level
     - First subitem
@@ -441,21 +439,21 @@ double--hypens.md
   ```
 
 - When one or more items in a list spans more than one line, the list is
-  REQUIRED to have newlines between each item. 
+  REQUIRED to have newlines between each item.
 
   _Correct example_:
-  
+
   ```Markdown
   - First item
-  
+
   - This second item spans two lines
     Not because this is needed, but hey, we need an example.
-    
+
   - Third item
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   - First item
   - This second item spans two lines
@@ -466,14 +464,14 @@ double--hypens.md
 - The indentation what comes inside list MUST be same as the item it is in.
 
   _Correct example_:
-  
+
   ```Markdown
   - This item spans two lines
     This is the second line
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   - This item spans two lines
    This is the second line
@@ -483,40 +481,39 @@ double--hypens.md
   it were concatenated with the sentence that comes before the list.
 
   _Examples_:
-  
+
   ```Markdown
   I want to eat:
 
   - apples
   - bananas
   - grapes
-  
+
   This is because one would say: "I want to eat apples.".
   ```
-  
+
   ```Markdown
   # How to ride a bike
 
   - Get on top of the bike.
   - Put your feet on the pedal.
   - Make the pedal turn.
-  
+
   This is because one would say: "How to ride a bike. Get on top of the bike."
   ```
 
-<!--alex ignore period-->
 - A list item MUST be punctuated if either it contains multiple sentences,
   paragraphs or starts with an upper case letter. The punctuation MUST BE
-  omitted if it would be a period (`.`).
+  omitted if it would be a dot (`.`).
 
   _Correct examples_:
-  
+
   ```Markdown
   - apples
   - bananas
   - grapes
   ```
-  
+
   ```Markdown
   - type in some code
   - Type in some more.
@@ -532,27 +529,27 @@ double--hypens.md
 - The hyphen (`-`) character MUST be followed by a space.
 
   _Correct example_:
-  
+
   ```Markdown
   - First item
   - Second item
   - Third item
   ```
-  
+
   _Incorrect examples_:
-  
+
   ```Markdown
   -First item
   -Second item
   -  Third item
   ```
-  
+
   ```Markdown
   * First item
   * Second item
   * Third item
   ```
-  
+
   ```Markdown
   + First item
   + Second item
@@ -570,15 +567,15 @@ double--hypens.md
   character.
 
   _Correct example_:
-  
+
   ```Markdown
   1. First item
   2. Second item
   3. Third item
   ```
-  
+
   _Incorrect examples_:
-  
+
   ```Markdown
   1 First item
   2 Second item
@@ -611,19 +608,19 @@ double--hypens.md
 - The task checkbox MUST be followed by a space character.
 
   _Correct example_:
-  
+
   ```Markdown
   Todo:
-  
+
   - [x] Create plan.
   - [ ] Rule the world!
   ```
-  
+
   _Incorrect example_:
 
   ```Markdown
   Todo:
-  
+
   - [X]Create plan.
   - []Rule the world!
   ```
@@ -654,13 +651,13 @@ This is an example of a horizontal rule.
 - There MUST NOT be any spaces between the backticks (`` ` ``) and the code.
 
   _Correct example_:
-  
+
   ```Markdown
   Please use `apt-get` to install packages on your Debian system.
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   Please use ` apt-get ` to install packages on your Debian system.
   ```
@@ -670,7 +667,7 @@ This is an example of a horizontal rule.
   triple backticks (```` ``` ````) MAY be used.
 
   _Example_:
-  
+
   ```Markdown
   Displaying a single backtick (`` ` ``) is actually a very special and rare case.
   ```
@@ -678,13 +675,13 @@ This is an example of a horizontal rule.
 - Shell code MUST NOT be prefixed with a dollar character (`$`).
 
   _Correct example_:
-  
+
   ```Markdown
   Please use `apt-get` to install packages on your Debian system.
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   Please use `$ apt-get` to install packages on your Debian system.
   ```
@@ -706,10 +703,10 @@ This is an example of a horizontal rule.
 - Code blocks MUST be fenced using three backtick characters (```` ``` ````).
 
   _Correct example_:
-  
+
   ```Markdown
       To generate a PHP info page use this code:
-  
+
       ```PHP
       <?php
         phpinfo();
@@ -717,10 +714,10 @@ This is an example of a horizontal rule.
   ```
 
   _Incorrect example_:
-  
+
   ```Markdown
   To generate a PHP info page use this code:
-  
+
     <?php
       phpinfo();
   ```
@@ -733,7 +730,7 @@ This is an example of a horizontal rule.
   language flag.
 
   _Correct example_:
-  
+
   ```Markdown
       ```txt
       This is monospaced text.
@@ -744,20 +741,20 @@ This is an example of a horizontal rule.
   be showing the command output on the same code block.
 
   _Correct example_:
-  
+
   ```Markdown
       ```txt
       $ rubocop .
-      
+
       Inspecting 16 files
       ................
-    
+
       16 files inspected, no offenses detected
       ```
   ```
 
   _Incorrect example_:
-  
+
   ```Markdown
       ```txt
       $ gem install rubocop
@@ -781,13 +778,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - Links MUST NOT have an extra trailing slash (`/`)
 
   _Correct example_:
-  
+
   ```Markdown
   <http://www.example.com>
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   <http://www.example.com/>
   ```
@@ -803,7 +800,7 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - The link itself MUST be wrapped into parentheses (`(`, `)`).
 
   _Example_:
-  
+
   ```Markdown
   [See the contributing guide for more info](/CONTRIBUTING.md)
   ```
@@ -812,13 +809,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   the parentheses containing the link.
 
   _Correct example_:
-  
+
   ```Markdown
   [See the contributing guide for more info](/CONTRIBUTING.md)
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [See the contributing guide for more info] (/CONTRIBUTING.md)
   ```
@@ -827,13 +824,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   the link and the link title.
 
   _Correct example_:
-  
+
   ```Markdown
   [See the contributing guide for more info](/CONTRIBUTING.md "Contributing guide")
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [See the contributing guide for more info](/CONTRIBUTING.md 'Contributing guide')
   ```
@@ -846,13 +843,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - The reference label MUST be delimited by square brackets and MUST NOT be omitted.
 
   _Correct example_:
-  
+
   ```Markdown
   [Visit Google][google]
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [google]
   ```
@@ -860,13 +857,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - There MUST NOT be spacing between the link and reference label brackets.
 
   _Correct example_:
-  
+
   ```Markdown
   [Visit Google][google]
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [Visit Google] [google]
   ```
@@ -875,13 +872,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   the reference label SHOULD be omitted.
 
   _Correct example_:
-  
+
   ```Markdown
   [google][]
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [google][google]
   ```
@@ -889,13 +886,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - Reference labels MUST be specified in lower case.
 
   _Correct example_:
-  
+
   ```Markdown
   [Visit Google][google]
   ```
-  
+
   _Incorrect examples_:
-  
+
   ```Markdown
   [Visit Google][]
   [Visit Google][Google]
@@ -905,15 +902,15 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   Undefined references are not allowed.
 
   _Correct example_:
-  
+
   ```Markdown
   [Google][google]
-  
+
   [google]: http://www.google.com
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [Google][google]
   ```
@@ -922,13 +919,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   followed by semicolon (`:`) and a space.
 
   _Correct example_:
-  
+
   ```Markdown
   [google]: http://www.google.com
   ```
-  
+
   _Incorrect examples_:
-  
+
   ```Markdown
   [google]:http://www.google.com
   [google] :http://www.google.com
@@ -939,13 +936,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   with a space between the link and the link title.
 
   _Correct example_:
-  
+
   ```Markdown
   [google]: http://www.google.com "Google Search"
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [google]: http://www.google.com 'Google Search'
   ```
@@ -957,7 +954,7 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - Each link definition MUST be unique, duplicates are not allowed.
 
   _Incorrect example_:
-  
+
   ```Markdown
   [google]: http://www.google.com "Google Search"
   [google]: http://www.google.nl "Google Search (Dutch)"
@@ -969,7 +966,7 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   greater-than (`>`) characters.
 
   _Example_:
-  
+
   ```Markdown
   <http://www.google.com>
   ```
@@ -977,12 +974,12 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - Automatic links MUST start with a protocol.
 
   _Correct examples_:
-  
+
   ```Markdown
   <http://www.google.com>
   <mailto:opensource@dealerdirect.nl>
   ```
-  
+
   _Incorrect examples_:
 
   ```Markdown
@@ -993,13 +990,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - Email addresses MUST use automatic links.
 
   _Correct example_:
-  
+
   ```Markdown
   Please mail us for questions at <mailto:opensource@dealerdirect.nl>
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   Please mail us for questions at opensource@dealerdirect.nl
   ```
@@ -1011,13 +1008,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 - The actual book/blog/document title MUST be linked.
 
   _Correct example_:
-  
+
   ```Markdown
   [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363)
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   Read [this](https://www.amazon.co.uk/dp/1452818363) book.
   ```
@@ -1026,13 +1023,13 @@ _Note_: Code blocks shown inside the above code block examples are indented.
   using a dash (`-`) surrounded by spaces.
 
   _Correct example_:
-  
+
   ```Markdown
   [A Small Book of Random Numbers: Volume 1](https://www.amazon.co.uk/dp/1452818363) - James McNalley
   ```
 
   _Incorrect examples_:
-  
+
   ```Markdown
   [A Small Book of Random Numbers: Volume 1 by James McNally](https://www.amazon.co.uk/dp/1452818363)
   [A Small Book of Random Numbers: Volume 1 - James McNally](https://www.amazon.co.uk/dp/1452818363)
@@ -1042,16 +1039,16 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 
 - In case the link points to a binary version of the book or document,
   the format MUST be specified between parentheses (`(`, `)`).
-  
+
   _Correct examples_:
-  
+
   ```Markdown
   [Barcode Overview](http://www.tec-it.com/download/PDF/Barcode_Reference_EN.pdf) (PDF)
   [Code Connected Volume 1](http://hintjens.wdfiles.com/local--files/main:files/cc1pe.pdf) - Pieter Hintjens (PDF)
   ```
 
   _Incorrect examples_:
-  
+
   ```Markdown
   [Barcode Overview](http://www.tec-it.com/download/PDF/Barcode_Reference_EN.pdf)
   [Code Connected Volume 1](http://hintjens.wdfiles.com/local--files/main:files/cc1pe.pdf) - Pieter Hintjens(PDF)
@@ -1059,15 +1056,15 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 
 - If the book or document is available in multiple formats, it is RECOMMENDED to
   add linked additional formats in the format specification.
-  
+
   _Correct example_:
-  
+
   ```Markdown
   [A Unix Person's Guide to PowerShell][powershellpdf] - Matt Penny (PDF, [ePub][powershellepub])
   ```
-  
+
   _Incorrect example_:
-  
+
   ```Markdown
   [A Unix Person's Guide to PowerShell][powershellpdf] - Matt Penny (PDF)
   [A Unix Person's Guide to PowerShell][powershellepub] - Matt Penny (ePub)
@@ -1075,7 +1072,7 @@ _Note_: Code blocks shown inside the above code block examples are indented.
 
 ## 9. Images
 
-- Images MUST follow the same syntax as links, 
+- Images MUST follow the same syntax as links,
   but preceded with an exclamation (`!`) character.
 
 - Images MUST follow all same rules as links.
@@ -1141,7 +1138,7 @@ grapes | one | $1
   in the body and header separator.
 
   _Example_:
-  
+
   ```Markdown
   | Left    | Centered | Right |
   | :------ | :------: | ----: |
@@ -1155,7 +1152,7 @@ grapes | one | $1
 - It is RECOMMENDED to use emoji, they help convey tone and intent,
   both of which are frequently lost in translation when communicating online.
 
-- In order to maintain maximum compatibility with different platform, 
+- In order to maintain maximum compatibility with different platform,
   used emoji MUST be listed on the emoji cheat sheet,
   found on the following URL:
 
