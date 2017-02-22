@@ -1,0 +1,27 @@
+/' This file will output a block which contains the date a diagram was generated
+ ' and a mention of PlantUml as the tool the diagram was generate with.
+ '
+ ' A version will also be mentioned if a `VERSION` constant has been defined using:
+ '
+ ' !define VERSION v0.1.0
+ '
+ ' To use this diagram, simply add the following line to a diagram:
+ '
+ ' !include ./path/to/generated.iuml
+ '/
+@startuml (id=generated-at)
+
+!ifndef LEGEND
+
+    !define LEGEND
+
+    legend right
+        <size:8>Generated <b>%date[yyyy-MM-dd HH:mm]%</b></size>
+        !ifdef VERSION
+        <size:8>Version: <b>VERSION</b></size>
+        !endif
+        <size:8>Created with <b>PlantUml</b></size>
+    end legend
+!endif
+
+@enduml

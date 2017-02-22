@@ -1,0 +1,186 @@
+/'
+ ' For tools that can edit PlantUml see: http://plantuml.com/running
+ '
+ ' For the common syntax reference see: http://plantuml.com/commons
+ ' For text formatting syntax see: http://plantuml.com/creole
+ ' For using icons see: http://plantuml.com/openiconic
+ ' For styling and colouring see: http://plantuml.com/skinparam
+ ' For more advanced features see http://plantuml.com/preprocessing
+ ' For the sequence diagrams syntax reference see: http://plantuml.com/sequence.html
+ '----------------------------------------------------------------------------'/
+
+@startuml (id=deliverables-specifications)
+
+!includeurl https://dealerdirect.github.io/templates/plant-uml/skinparams.iuml
+
+/' Keep the line below commented out as long as the diagram is a draft '/
+'skinparam handwritten true
+
+left to right direction
+
+!ifndef IMAGE_DIR
+  !define IMAGE_DIR ./../../../images
+!endif
+
+!ifndef TITLE
+  !define TITLE Development Process\n//Actors - **Deliverables** - Handshakes - Pipeline//\n\n=Specifications
+!endif
+
+title TITLE
+
+!include deliverables-legend.iuml
+
+/'=========================================================================='/
+ ' ACTORS
+/'=========================================================================='/
+!include ../actors.iuml
+/'=========================================================================='/
+
+/'=========================================================================='/
+ ' DELIVERABLES
+/'=========================================================================='/
+package SPECIFICATION #FFF {
+/'--------------------------------------------------------------------------'/
+  rectangle IDEA #FF9C23 {
+
+    usecase idea as "
+    <img:IMAGE_DIR/idea.png> <color:#FF9C23>**Idea Ticket**</color>
+    ----
+    Reporter (//End User//)
+    "
+    usecase problem as "**Problem Definition**"
+
+    usecase personae as "**Personae**" #FFCC55
+
+  }
+/'--------------------------------------------------------------------------'/
+  rectangle PROPOSAL #E5493A {
+    usecase proposal as "
+      <img:IMAGE_DIR/proposal.png> <color:#E5493A>**Proposal Ticket**</color>
+      ----
+    "
+
+    usecase usecases as "**Use Cases**" #FF7766
+  }
+/'--------------------------------------------------------------------------'/
+  rectangle PROJECT #904EE2 {
+
+      usecase acceptance_criteria as "
+        **Acceptance Criteria**
+        ---
+        Happy Path
+        ....
+        Deviating Paths
+      "
+
+      usecase proposal_sequence_diagram as "
+        <img:IMAGE_DIR/image.png> **Sequence Diagram**
+        ----
+        High Level Functional
+        Process Definition
+        ....
+        Using PlantUml
+      "
+      usecase flowchart as "
+        <img:IMAGE_DIR/image.png> **UI-Flow Chart**
+        ----
+        Using whiteboard
+      "
+      usecase question as "
+        <img:https://goo.gl/t857rT> **Research Question**
+      "
+
+    usecase epic as "
+      <img:IMAGE_DIR/epic.png> <color:#904EE2>**Epic Ticket**</color>
+      ----
+    "
+
+    usecase graphics as "
+      <img:IMAGE_DIR/adobe-xd.png> <color:#FF2BC2>**Graphic Design**</color>
+      ----
+      Using Adobe XD
+    "
+    usecase wireframe as "
+      <img:IMAGE_DIR/adobe-xd.png> <color:#FF2BC2>**Wireframe**</color>
+      ----
+      Using Adobe XD
+    "
+    usecase poc as "
+      <img:IMAGE_DIR/bitbucket.png> <color:#205081>**Proof of Concept**</color>
+      or <color:#205081>**Prototype**</color>
+      ----
+      Code Repository
+      on Bitbucket
+    "
+    usecase project_sequence_diagram as "
+      <img:IMAGE_DIR/image.png> **Sequence Diagram**
+      ----
+      Low Level Functional
+      Process Definition
+      ....
+      Using PlantUml
+    "
+  }
+}
+/'=========================================================================='/
+
+/'=========================================================================='/
+usecase presentation as "
+  <img:IMAGE_DIR/demo.png> Presentation
+  ---
+  Present the functional
+  specifications to the
+  development team
+"
+/'=========================================================================='/
+
+/'=========================================================================='/
+ ' CONNECTIONS
+ /'--------------------------------------------------------------------------'/
+SH <.up. presentation
+PO -up-> presentation
+DEV <-up- presentation
+/'--------------------------------------------------------------------------'/
+SH => idea
+SH -> problem
+SH => proposal
+/'--------------------------------------------------------------------------'/
+PO -> acceptance_criteria
+PO => epic
+PO => proposal
+PO -> proposal_sequence_diagram
+PO -> question
+/'--------------------------------------------------------------------------'/
+UX -> wireframe
+UX -> flowchart
+/'--------------------------------------------------------------------------'/
+GD -> graphics
+/'--------------------------------------------------------------------------'/
+CM -> poc
+CM -> project_sequence_diagram
+/'=========================================================================='/
+
+/'=========================================================================='/
+' NOTES
+/'--------------------------------------------------------------------------'/
+note right of personae
+  In the future, Product Owners and
+  Stake Holders should collaborate
+  to define **Personae**
+end note
+
+note right of usecases
+  In the future, Product Owners and
+  Stake Holders should collaborate
+  to define high-level **Use Cases**
+end note
+
+note right of project_sequence_diagram
+  Only **Users** and **user facing applications**
+  belong in these diagram's
+end note
+/'=========================================================================='/
+
+!include ./../generated.iuml
+
+@enduml

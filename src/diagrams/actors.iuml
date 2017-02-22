@@ -1,0 +1,71 @@
+/'
+ ' For tools that can edit PlantUml see: http://plantuml.com/running
+ '
+ ' For the common syntax reference see: http://plantuml.com/commons
+ ' For text formatting syntax see: http://plantuml.com/creole
+ ' For using icons see: http://plantuml.com/openiconic
+ ' For styling and colouring see: http://plantuml.com/skinparam
+ ' For more advanced features see http://plantuml.com/preprocessing
+ ' For the sequence diagrams syntax reference see: http://plantuml.com/sequence.html
+ '----------------------------------------------------------------------------'/
+
+@startuml (id=actors)
+
+!includeurl https://dealerdirect.github.io/templates/plant-uml/skinparams.iuml
+
+/' Keep the line below commented out as long as the diagram is a draft '/
+'skinparam handwritten true
+
+!ifndef TITLE
+  !define TITLE Development Process\n//**Actors** - Deliverables - Handshakes - Pipeline//
+!endif
+
+title TITLE
+
+!ifndef ACTORS
+
+!define ACTORS
+
+!include ./generated.iuml
+
+/'=========================================================================='/
+ ' ACTORS
+/'=========================================================================='/
+actor "End Users" as EU #FFFFFF
+actor "Stake Holder" as SH #FF9C23
+actor "Product Owner" as PO #E5493A
+'----------------------------------------------------------------------------'/
+actor "Developer" as DEV #4BADE8
+actor "Programmer" as CM << Developer >> #4BADE8 /' CM = Code Monkey'/
+actor "User eXperience" as UX  << Developer >> #4BADE8
+actor "Graphic Designer" as GD << Developer >> #4BADE8
+'----------------------------------------------------------------------------'/
+rectangle "<color:63BA3C>**Scrum Master**</color>" #EEFFEE {
+  actor SM as "Offers assistance\nin all levels" #63BA3C
+}
+'----------------------------------------------------------------------------'/
+rectangle "<color:904EE2>**Tester**</color>" #F9DFF9 {
+  actor QA as "Offers risk \nassessment\nin all levels" #904EE2
+}
+'----------------------------------------------------------------------------'/
+EU -right-> SH
+'----------------------------------------------------------------------------'/
+DEV --|> CM
+DEV --|> GD
+DEV --|> UX
+'----------------------------------------------------------------------------'/
+QA -[hidden]up- SM
+'----------------------------------------------------------------------------'/
+SH -[hidden]right- PO
+PO -[hidden]right- UX
+UX -[hidden]right- GD
+GD -[hidden]right- CM
+/'=========================================================================='/
+
+/'=========================================================================='/
+' NOTES
+/'--------------------------------------------------------------------------'/
+/'=========================================================================='/
+
+!endif
+@enduml
