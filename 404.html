@@ -19,7 +19,7 @@ title: 404 - Page Not Found
            or entry.url contains "/assets/"
     %}
       <li>
-        <a href="/{{ entry.url | prepend: site.github.project_title }}">
+        <a href="{{ entry.url }}">
           {{ entry.url }}
         </a>
       </li>
