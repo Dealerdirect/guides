@@ -13,15 +13,18 @@ title: 404 - Page Not Found
 
 <ul>
   {% for entry in entries %}
-    {% if entry.url != '/404.html' and entry.url != '/sitemap.xml' and entry.url != '/robots.txt' %}
+    {% unless entry.url == '/404.html'
+           or entry.url == '/sitemap.xml'
+           or entry.url == '/robots.txt'
+           or entry.url contains "/assets/"
+    %}
       <li>
         <a href="/{{ entry.url | prepend: site.github.project_title }}">
           {{ entry.url }}
         </a>
       </li>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 </ul>
 
 <hr>
-

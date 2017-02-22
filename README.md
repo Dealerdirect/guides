@@ -87,7 +87,7 @@ Did not find a matching vacancy? Just [get in touch]!
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Dealerdirect B.V.
+Copyright (c) 2016-2017 Dealerdirect B.V.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -109,7 +109,7 @@ THE SOFTWARE.
 
 [travis]: https://travis-ci.org/DealerDirect/guides
 [travis-shield]: https://img.shields.io/travis/DealerDirect/guides.svg?style=flat-square
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2016.svg?style=flat-square
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2017.svg?style=flat-square
 [awesome-shield]: https://img.shields.io/badge/awesome%3F-yes-brightgreen.svg?style=flat-square
 [license-shield]: https://img.shields.io/github/license/dealerdirect/guides.svg?style=flat-square
 [contribution guidelines]: CONTRIBUTING.md

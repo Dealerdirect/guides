@@ -1160,7 +1160,7 @@ grapes | one | $1
 
 ## 12. HTML
 
-- One SHOULD NOT not to use HTML, unless this is absolutely necessary.
+- One SHOULD NOT use HTML, unless this is absolutely necessary.
 - The HTML code MUST be preceded and followed by a newline.
 - Markdown MUST NOT be used inside the HTML, use plain HTML instead.
 
@@ -1181,30 +1181,6 @@ This text is normal **Markdown** again.
 ^1: [No newline at end of file][nonewline] - Mike Burns
 
 ^2: [MARKDOWN, STRIKETHROUGH, AND SLACK][strikethrough] - John Gruber
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 Dealerdirect B.V.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
 
 [rfc2119]: http://www.ietf.org/rfc/rfc2119.txt
 [nonewline]: https://robots.thoughtbot.com/no-newline-at-end-of-file
