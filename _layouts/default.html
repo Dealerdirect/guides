@@ -15,11 +15,30 @@
       padding: 45px;
       position: relative;
     }
+
+     ol.breadcrumbs {
+       padding: 0;
+     }
+    .breadcrumbs__item {
+      display: inline-block;
+    }
+    .breadcrumbs__item:before {
+      /* Uses » to separate breadcrumbs */
+      content: '\00BB';
+    }
+    .breadcrumbs__item:first-child:before {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
-  <article class="markdown-body">
+
+
+<article class="markdown-body">
+
+    {% include breadcrumb.lqd %}
+
     <div class="container">
       {{ content }}
     </div>
