@@ -8,7 +8,6 @@ permalink: /protocols/development-process/
 
 The following protocols are available for the software development process:
 
-- [Deliverables](./development-process/deliverables/) -- Outlines who is 
+- [Deliverables](./deliverables/) -- Outlines who is 
  responsible for providing which deliverable during the software development 
  process.
-
