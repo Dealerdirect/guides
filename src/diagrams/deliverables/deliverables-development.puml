@@ -1,0 +1,132 @@
+/'
+ ' For tools that can edit PlantUml see: http://plantuml.com/running
+ '
+ ' For the common syntax reference see: http://plantuml.com/commons
+ ' For text formatting syntax see: http://plantuml.com/creole
+ ' For using icons see: http://plantuml.com/openiconic
+ ' For styling and colouring see: http://plantuml.com/skinparam
+ ' For more advanced features see http://plantuml.com/preprocessing
+ ' For the sequence diagrams syntax reference see: http://plantuml.com/sequence.html
+ '----------------------------------------------------------------------------'/
+
+@startuml (id=deliverables-development)
+
+!includeurl https://dealerdirect.github.io/templates/plant-uml/skinparams.iuml
+
+/' Keep the line below commented out as long as the diagram is a draft '/
+'skinparam handwritten true
+
+left to right direction
+
+!ifndef TITLE
+  !define TITLE Development Process\n//Actors - **Deliverables** - Handshakes - Pipeline//\n\n=Development
+!endif
+
+!ifndef IMAGE_DIR
+  !define IMAGE_DIR ./../../../images
+!endif
+
+title TITLE
+
+!include deliverables-legend.iuml
+
+/'=========================================================================='/
+ ' ACTORS
+/'=========================================================================='/
+!include ../actors.iuml
+/'=========================================================================='/
+
+/'=========================================================================='/
+ ' DELIVERABLES
+/'=========================================================================='/
+package DEVELOPMENT #FFF {
+/'--------------------------------------------------------------------------'/
+  card "STORY\nHigh-Level Task" #63BA3C {
+    usecase story as "
+      <img:IMAGE_DIR/story.png> <color:#63BA3C>**Story Ticket**</color>
+      ----
+      User story
+      ....
+      Job Story
+    "
+
+    usecase class_diagram as "
+      <img:IMAGE_DIR/image.png> **Class Diagram**
+      ----
+      Using PlantUml
+    "
+
+    usecase entity_relation_diagram as "
+      <img:IMAGE_DIR/image.png> **Entity Relation Diagram**
+      ----
+      Using PlantUml
+    "
+    usecase story_sequence_diagram as "
+      <img:IMAGE_DIR/image.png> **Sequence Diagram**
+      ----
+      Technical Process
+      Definition
+      ....
+      Using PlantUml
+    "
+  }
+/'--------------------------------------------------------------------------'/
+  rectangle "TASK\nLow-Level Task" #4BADE8 {
+    usecase task as "
+      <img:IMAGE_DIR/task.png> <color:#4BADE8>**Task Ticket**</color>
+      ----
+    "
+    usecase subtask as "
+      <img:IMAGE_DIR/subtask.png> <color:#4BADE8>**Sub-Task Ticket**</color>
+      ----
+    "
+
+    usecase code as "
+      <img:IMAGE_DIR/bitbucket.png> <color:#205081>**Working Software**</color>
+      ----
+      Code Repository
+      on Bitbucket
+    "
+  }
+}
+/'=========================================================================='/
+
+/'=========================================================================='/
+usecase demonstration as "
+  <img:IMAGE_DIR/demo.png> Demonstration
+  ---
+  Demonstrate the implemented
+  changes to the product owner
+"
+/'=========================================================================='/
+
+/'=========================================================================='/
+ ' CONNECTIONS
+ /'--------------------------------------------------------------------------'/
+SH <.up. demonstration
+PO <-up- demonstration
+DEV -up-> demonstration
+/'--------------------------------------------------------------------------'/
+PO => story
+/'--------------------------------------------------------------------------'/
+DEV => subtask
+DEV => task
+/'--------------------------------------------------------------------------'/
+CM -> code
+CM -> story_sequence_diagram
+CM -> class_diagram
+CM -> entity_relation_diagram
+/'=========================================================================='/
+
+/'=========================================================================='/
+' NOTES
+/'--------------------------------------------------------------------------'/
+note right of code
+  The definition of "Working Software"
+  is defined in the //**Definition of Done**//
+end note
+/'=========================================================================='/
+
+!include ./../generated.iuml
+
+@enduml

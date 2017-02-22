@@ -1,0 +1,44 @@
+/'
+ ' For tools that can edit PlantUml see: http://plantuml.com/running
+ '
+ ' For the common syntax reference see: http://plantuml.com/commons
+ ' For text formatting syntax see: http://plantuml.com/creole
+ ' For using icons see: http://plantuml.com/openiconic
+ ' For styling and colouring see: http://plantuml.com/skinparam
+ ' For more advanced features see http://plantuml.com/preprocessing
+ ' For the sequence diagrams syntax reference see: http://plantuml.com/sequence.html
+ '----------------------------------------------------------------------------'/
+@startuml (id=deliverables-legend)
+
+!includeurl https://dealerdirect.github.io/templates/plant-uml/skinparams.iuml
+
+/' Keep the line below commented out as long as the diagram is a draft '/
+'skinparam handwritten true
+
+left to right direction
+
+!ifndef TITLE
+  !define TITLE Development Process\n//Actors - **Deliverables** - Handshakes - Pipeline//\n\n=Legend
+!endif
+
+title TITLE
+/'=========================================================================='/
+ ' LEGEND
+/'=========================================================================='/
+rectangle Legend #FFFFFF {
+  usecase legend as "
+    **Format of Deliverable**
+    ----
+    Description of Deliverable
+  "
+}
+/'=========================================================================='/
+
+/'=========================================================================='/
+' NOTES
+/'--------------------------------------------------------------------------'/
+/'=========================================================================='/
+
+!include ./../generated.iuml
+
+@enduml
