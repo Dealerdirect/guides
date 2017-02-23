@@ -7,4 +7,4 @@ permalink: /protocols/development-process/deliverables/
 The diagram below shows who is responsible for which deliverable during the 
 different stages of the software development process.
 
-![](deliverables.png)
+![](deliverables.png "zoom")
