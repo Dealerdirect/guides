@@ -29,6 +29,22 @@
     .breadcrumbs__item:first-child:before {
       display: none;
     }
+
+    .js-image-zoom {
+        border: 1px solid #EEE;
+    }
+
+    /* magnifying glass icon */
+    .js-image-zoom::before{
+        content:'';
+        display:block;
+        width:33px;
+        height:33px;
+        position:absolute;
+        top:0;
+        right:0;
+        background:url(/images/magnifying-glass.png);
+    }
   </style>
 </head>
 
@@ -47,5 +63,18 @@
   <div class="banner banner-right banner-fixed">
       <a href="{{ site.github.repository_url }}/tree/master/{{ page.path }}">View on github</a>
   </div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.zoom/1.7.18/jquery.zoom.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('img[title="zoom"]')
+                .wrap('<span class="js-image-zoom" style="display:inline-block"></span>')
+                .css('display', 'block')
+                .parent()
+                .zoom()
+            ;
+        });
+    </script>
 </body>
 </html>
