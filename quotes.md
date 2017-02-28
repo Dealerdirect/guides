@@ -13,15 +13,15 @@ saves others the effort of having to hunt for usable quotes.
 
 Quotes should have the following format:
 
-
+```markdown
     > _“Quote”_
     > ~ Author
+```
 
 This will be displayed thus:
 
 > _“Quote”_
 > ~ Author
-
 
 ## Quotes
 
@@ -30,7 +30,8 @@ This will be displayed thus:
 - > _“If anyone wants to know what the definition of 'dope' means, it's: 'Definition of Public Enemy.'”_
   > ~ Flavor Flav
 
-- > _“Definition, rationality, and structure are ways of seeing, but they become prisons when they blank out other ways of seeing.”_
+- > _“Definition, rationality, and structure are ways of seeing, but they become prisons when they blank out other ways 
+  > of seeing.”_
   > ~ A. R. Ammons
 
 - > _“In computing, turning the obvious into the useful is a living definition of the word 'frustration'.”_
@@ -39,7 +40,8 @@ This will be displayed thus:
 - > _“My definition of 'innovative' is providing value to the customer.”_
   > ~ Mary Barra
 
-- > _“The definition of an 'operating system' is bound to evolve with customer demands and technological possibilities.”_
+- > _“The definition of an 'operating system' is bound to evolve with customer demands and technological 
+  > possibilities.”_
   > ~ Virginia Postrel
 
 - > _“To pursue a goal which is by definition unattainable is to condemn oneself to a state of perpetual unhappiness.”_
@@ -47,9 +49,6 @@ This will be displayed thus:
 
 - > _“Architecture is by definition a very collaborative process.”_
   > ~ Joshua Prince-Ramus
-
-- > _“Dreams are, by definition, cursed with short life spans.”_
-  > ~ Candice Bergen
 
 ### Done
 
@@ -83,7 +82,7 @@ This will be displayed thus:
 - > _“True happiness comes from the joy of deeds well done, the zest of creating things new.”_
   > ~ Antoine de Saint-Exupery
 
-# Estimatable
+### Estimatable
 
 - > _“Life should not be estimated exclusively by the standard of dollars and cents.”_
   > ~ Charles Goodyear
@@ -118,7 +117,7 @@ This will be displayed thus:
 - > _“In character, in manner, in style, in all things, the supreme excellence is simplicity.”_
   > ~ Henry Wadsworth Longfellow
 
-- > _“Fashion fades, only style remains the same.”_
+- > _“Fashion fades, only style stays the same.”_
   > ~ Coco Chanel
 
 - > _“Style is knowing who you are, what you want to say, and not giving a damn.”_
