@@ -44,9 +44,6 @@ This will be displayed thus:
   > possibilities.”_
   > ~ Virginia Postrel
 
-- > _“To pursue a goal which is by definition unattainable is to condemn oneself to a state of perpetual unhappiness.”_
-  > ~ Emile Durkheim
-
 - > _“Architecture is by definition a very collaborative process.”_
   > ~ Joshua Prince-Ramus
 
@@ -66,9 +63,6 @@ This will be displayed thus:
 
 - > _“Well begun is half done.”_
   > ~ Aristotle
-
-- > _“Well done is better than well said.”_
-  > ~ Benjamin Franklin
 
 - > _“Never retreat. Never explain. Get it done and let them howl.”_
   > ~ Benjamin Jowett
