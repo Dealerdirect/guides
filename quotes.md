@@ -50,9 +50,6 @@ This will be displayed thus:
 - > _“Architecture is by definition a very collaborative process.”_
   > ~ Joshua Prince-Ramus
 
-- > _“Dreams are, by definition, cursed with short life spans.”_
-  > ~ Candice Bergen
-
 ### Done
 
 - > _“It always seems impossible until it's done.”_
@@ -120,7 +117,7 @@ This will be displayed thus:
 - > _“In character, in manner, in style, in all things, the supreme excellence is simplicity.”_
   > ~ Henry Wadsworth Longfellow
 
-- > _“Fashion fades, only style remains the same.”_
+- > _“Fashion fades, only style stays the same.”_
   > ~ Coco Chanel
 
 - > _“Style is knowing who you are, what you want to say, and not giving a damn.”_
