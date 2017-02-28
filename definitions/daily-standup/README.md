@@ -9,13 +9,12 @@ permalink: /definitions/daily-standup/
 
 ## Introduction
 
-Standup is a thing we use to inform each other on blockers or impediments. 
-We use this to share information and quickly interfere if someone needs / might 
+Standup is a thing we use to inform each other about blockers or impediments. 
+We use this to share information and quickly intervene if someone needs / might 
 need help. We excluded the Product Owners from the stand-up (for now). 
 
-The product Owners can "stand (up)" with us but are not allowed to ask for updates. 
-Post updates are allowed in the line of "I am demoing FEATURE to 
-stakeholders or other progress.
+Product Owners are allowed to communicate post-standup updates in the line of 
+"I am demoing FEATURE to stakeholders" or other progress the product owners made.
 
 ## Guidelines
 
@@ -25,7 +24,7 @@ stakeholders or other progress.
 
 - There is no obligation of speaking at all, don't say something just to say something.
 
-- Information shared should not be present on the whiteboard
+- Information should be shared that is not be present on the whiteboard
 (I am going to shutdown the test environment for instance).
 
 - Impediments should be discussed so people can help solve them.
