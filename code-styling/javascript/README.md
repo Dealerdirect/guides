@@ -1,6 +1,11 @@
+---
+permalink: /code-styling/javascript/
+---
+
 # Dealerdirect style guide: Javascript
 
-_A mostly reasonable approach to JavaScript_
+> _“A mostly reasonable approach to JavaScript”_ ~ Harrison Shoff
+
 
 At Dealerdirect we follow the Javascript code style guidelines as created by
 [Airbnb][airbnb].
