@@ -18,6 +18,7 @@ Post updates are allowed in the line of "I am demoing FEATURE to
 stakeholders or other progress.
 
 ## Guidelines
+
 ![Definition of Daily Standup](../../images/definitions/definition-of-standup.jpg)
 
 - Standup is optional!
