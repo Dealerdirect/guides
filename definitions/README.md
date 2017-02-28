@@ -38,7 +38,8 @@ permalink: /definitions/
 
 This guide defines various definitions we use at Dealerdirect. The intent of this 
 guide is to help people understand what is expected of them and what they can 
-expect from others. This is done by providing a clear definition of various ceremonies and artifact.
+expect from others. This is done by providing a clear definition of various 
+ceremonies and artifacts.
 
 The following definitions are available:
 
