@@ -6,7 +6,6 @@ permalink: /code-styling/javascript/
 
 > _“A mostly reasonable approach to JavaScript”_ ~ Harrison Shoff
 
-
 At Dealerdirect we follow the Javascript code style guidelines as created by
 [Airbnb][airbnb].
 

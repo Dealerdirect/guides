@@ -10,16 +10,32 @@ permalink: /definitions/done/
 ![Definition of Done](../../images/definitions/definition-of-done.jpg)
 
 1. Have an issue in JIRA (and thus, an issue ID)
+
 2. Have an estimate that is documented in the JIRA issue
-3. Have feedback (regarding the issue specifications and estimate) given to the Product Owner the ticket relates to
+
+3. Have feedback (regarding the issue specifications and estimate) given to the 
+   Product Owner the ticket relates to
+
 4. Have a post-it on the scrum board which contains the estimate and the ticket ID
-5. Have one dot "•" on the post-it for each day it is in the "Doing" lane and a cross "×" for each time a post-it is moved back to the "Todo" lane and a red dot for each day "stalled"
-6. Have any and all relevant information that is required for the issue to be transferable between developers in JIRA, updates as frequent as possible
+
+5. Have one dot "•" on the post-it for each day it is in the "Doing" lane and a 
+   cross "X" for each time a post-it is moved back to the "Todo" lane and a red 
+   dot for each day "stalled"
+
+6. Have any and all relevant information that is required for the issue to be 
+   transferable between developers in JIRA, updates as frequent as possible
+
 7. Have any work done for the issue pushed to a remote repository at least once a day
-8. Have a pull-request opened on Bitbucket when work is finalised (or earlier if formal feedback is required)
+
+8. Have a pull-request opened on Bitbucket when work is finalized (or earlier if 
+   formal feedback is required)
+
 9. Have the pull-request be approved by (at least) 2 developers
+
 10. Have the functionality related to an issue be tested/checked/validated
+
 11. Have been merged to the master branch after the changes have been tested and approved
+
 12. Have the hours spent on the ticket added in JIRA to the related issue
 
 ![As decided by the Development Team](../../images/definitions/as-decided-by-the-development-team.jpg)
