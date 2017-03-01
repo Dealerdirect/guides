@@ -2,8 +2,6 @@ timezone: Europe/Amsterdam
 
 exclude: [Gemfile, Gemfile.lock, bin/, node_modules]
 
-baseurl: nil
-
 # permalink: pretty # @NOTE: This will break (image) links
 
 webrick:
