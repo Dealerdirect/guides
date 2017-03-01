@@ -19,7 +19,7 @@
         {% for static_file in site.static_files %}
             {% if static_file.path == filePath %}
                 {% capture output %}
-  <link rel="stylesheet" media="all" href="{{ filePath }}">{% endcapture  %}
+  <link rel="stylesheet" media="all" href="{{ filePath | prepend:site.baseurl }}">{% endcapture  %}
                 {% assign tags = tags | strip_newlines | append: output %}
             {% endif %}
         {% endfor %}
