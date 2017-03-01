@@ -1,13 +1,45 @@
 ---
-permalink: /protocols/development-process/work-approach-checklist.html
+permalink: /protocols/development-process/work-approach-checklist/
 ---
 
-<link rel="stylesheet" href="roles.css" />
+<link rel="stylesheet" href="../roles.css" />
 
 # Work approach checklist
 
-- auto-gen TOC:
-{:toc}
+## Table of contents
+
+<!-- toc -->
+
+- [Introduction](#introduction)
+
+- [Start](#start)
+
+- ![](../images/idea.png) **Idea Ticket**
+
+  - [1. **Is the IDEA clear enough to create an IDEA ticket❔**](#1-is-the-idea-clear-enough-to-create-an-idea-ticket)
+  - [2. **What is the impact of the idea on the business❔**](#2-what-is-the-impact-of-the-idea-on-the-business)
+  - [3. **What is the impact of the idea on the current system❔**](#3-what-is-the-impact-of-the-idea-on-the-current-system)
+  - [4. **Which dependencies does the idea have❔**](#4-which-dependencies-does-the-idea-have)
+
+- ![](../images/proposal.png) **Proposal Ticket**
+
+  - [5. **Can a PROPOSAL be created from the available information❔**](#5-can-a-proposal-be-created-from-the-available-information)
+  - [6. **Are all of the specifications clear❔**](#6-are-all-of-the-specifications-clear)
+
+- ![](../images/epic.png) **Epic Ticket**
+
+  - [7. **Can a PROJECT be created from the available information❔**](#7-can-a-project-be-created-from-the-available-information)
+  - [8. **Have all low-level dependencies been met❔**](#8-have-all-low-level-dependencies-been-met)
+
+- ![](../images/story.png) **Story Ticket**
+
+  - [9. **Can a high-level description be created❔**](#9-can-a-high-level-description-be-created)
+
+- ![](../images/task.png) **Task Ticket** ![](../images/subtask.png) **Sub-Task Ticket**
+
+  - [10. **Can a low-level work ticket be created❔**](#10-can-a-low-level-work-ticket-be-created)
+
+<!-- tocstop -->
 
 ## Introduction
 
@@ -44,13 +76,19 @@ Master or QA)
 
 -------------------------------------------------------------------------------
 
-## ![](images/idea.png) Idea Ticket
+## Start
+
+The whole process begins when someone has an idea about how to improve an 
+application so more value can be added for an end user.
+
+_Responsibility of_: (Someone representing the) <span class="role role-end-user">End User</span>
+
+## ![](../images/idea.png) Idea Ticket
 
 ### 1. **Is the IDEA clear enough to create an IDEA ticket❔**
 
-When an <span class="role role-end-user">End User</span> or stakeholder has
-the idea that something should be changed or added to the system, it should be
-clear what problem the idea addresses.
+When an End User or stakeholder has the idea that something should be changed or 
+added to the system, it should be clear what problem the idea addresses.
 
 The product owner should be able to summarize the goal in one or two sentences.
 
@@ -100,7 +138,7 @@ to be informed or collaborated with?
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/proposal.png) Proposal Ticket
+## ![](../images/proposal.png) Proposal Ticket
 
 ### 5. **Can a PROPOSAL be created from the available information❔**
 
@@ -122,28 +160,28 @@ need to be created.
 There are various tools available to make matters more clear. Depending on the
 subject, one or more of the following can be used to paint a clear picture:
 
-- ![](images/adobe-xd.png) Graphic Design _Responsibility of_:
+- ![](../images/adobe-xd.png) Graphic Design _Responsibility of_:
   <span class="role role-graphic-designer">Graphic Designer</span>.
 
-- ![](images/bitbucket.png) Proof of Concept _Responsibility of_:
+- ![](../images/bitbucket.png) Proof of Concept _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
-- ![](images/bitbucket.png) Prototype _Responsibility of_:
+- ![](../images/bitbucket.png) Prototype _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
 - ![](https://goo.gl/t857rT) Research Question _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
-- ![](images/image.png) Application/High-level Sequence Diagram _Responsibility of_:
+- ![](../images/image.png) Application/High-level Sequence Diagram _Responsibility of_:
   <span class="role role-product-owner">Product Owner</span>.
 
-- ![](images/image.png) Service/System/Low-Level Sequence Diagram _Responsibility of_:
+- ![](../images/image.png) Service/System/Low-Level Sequence Diagram _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
-- ![](images/image.png) UI-flow Chart _Responsibility of_:
+- ![](../images/image.png) UI-flow Chart _Responsibility of_:
   <span class="role role-ux">User eXperience</span>.
 
-- ![](images/adobe-xd.png) Wireframe _Responsibility of_:
+- ![](../images/adobe-xd.png) Wireframe _Responsibility of_:
   <span class="role role-ux">User eXperience</span>.
 
 Instead of creating these deliverables themselves, a product owner can
@@ -154,7 +192,7 @@ than just the happy path, deviations from the main flow should also be stated.
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/epic.png) Epic Ticket
+## ![](../images/epic.png) Epic Ticket
 
 ### 7. **Can a PROJECT be created from the available information❔**
 
@@ -185,7 +223,7 @@ If not, what is missing? Who is responsible for the deliverable?
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/story.png) Story Ticket
+## ![](../images/story.png) Story Ticket
 
 ### 9. **Can a high-level description be created❔**
 
@@ -194,7 +232,7 @@ issue can be planned.
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/task.png) Task Ticket <br /> ![](images/subtask.png) Sub-Task Ticket
+## ![](../images/task.png) Task Ticket <br /> ![](../images/subtask.png) Sub-Task Ticket
 
 ### 10. **Can a low-level work ticket be created❔**
 
