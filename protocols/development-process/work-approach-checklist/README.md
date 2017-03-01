@@ -1,8 +1,8 @@
 ---
-permalink: /protocols/development-process/work-approach-checklist.html
+permalink: /protocols/development-process/work-approach-checklist/
 ---
 
-<link rel="stylesheet" href="roles.css" />
+<link rel="stylesheet" href="../roles.css" />
 
 # Work approach checklist
 
@@ -44,7 +44,7 @@ Master or QA)
 
 -------------------------------------------------------------------------------
 
-## ![](images/idea.png) Idea Ticket
+## ![](../images/idea.png) Idea Ticket
 
 ### 1. **Is the IDEA clear enough to create an IDEA ticket❔**
 
@@ -100,7 +100,7 @@ to be informed or collaborated with?
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/proposal.png) Proposal Ticket
+## ![](../images/proposal.png) Proposal Ticket
 
 ### 5. **Can a PROPOSAL be created from the available information❔**
 
@@ -122,28 +122,28 @@ need to be created.
 There are various tools available to make matters more clear. Depending on the
 subject, one or more of the following can be used to paint a clear picture:
 
-- ![](images/adobe-xd.png) Graphic Design _Responsibility of_:
+- ![](../images/adobe-xd.png) Graphic Design _Responsibility of_:
   <span class="role role-graphic-designer">Graphic Designer</span>.
 
-- ![](images/bitbucket.png) Proof of Concept _Responsibility of_:
+- ![](../images/bitbucket.png) Proof of Concept _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
-- ![](images/bitbucket.png) Prototype _Responsibility of_:
+- ![](../images/bitbucket.png) Prototype _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
 - ![](https://goo.gl/t857rT) Research Question _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
-- ![](images/image.png) Application/High-level Sequence Diagram _Responsibility of_:
+- ![](../images/image.png) Application/High-level Sequence Diagram _Responsibility of_:
   <span class="role role-product-owner">Product Owner</span>.
 
-- ![](images/image.png) Service/System/Low-Level Sequence Diagram _Responsibility of_:
+- ![](../images/image.png) Service/System/Low-Level Sequence Diagram _Responsibility of_:
   <span class="role role-programmer">Programmer</span>.
 
-- ![](images/image.png) UI-flow Chart _Responsibility of_:
+- ![](../images/image.png) UI-flow Chart _Responsibility of_:
   <span class="role role-ux">User eXperience</span>.
 
-- ![](images/adobe-xd.png) Wireframe _Responsibility of_:
+- ![](../images/adobe-xd.png) Wireframe _Responsibility of_:
   <span class="role role-ux">User eXperience</span>.
 
 Instead of creating these deliverables themselves, a product owner can
@@ -154,7 +154,7 @@ than just the happy path, deviations from the main flow should also be stated.
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/epic.png) Epic Ticket
+## ![](../images/epic.png) Epic Ticket
 
 ### 7. **Can a PROJECT be created from the available information❔**
 
@@ -185,7 +185,7 @@ If not, what is missing? Who is responsible for the deliverable?
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/story.png) Story Ticket
+## ![](../images/story.png) Story Ticket
 
 ### 9. **Can a high-level description be created❔**
 
@@ -194,7 +194,7 @@ issue can be planned.
 
 _Responsibility of_: <span class="role role-product-owner">Product Owner</span>
 
-## ![](images/task.png) Task Ticket <br /> ![](images/subtask.png) Sub-Task Ticket
+## ![](../images/task.png) Task Ticket <br /> ![](../images/subtask.png) Sub-Task Ticket
 
 ### 10. **Can a low-level work ticket be created❔**
 
