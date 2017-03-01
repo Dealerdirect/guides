@@ -7,6 +7,7 @@
   <link rel="stylesheet" media="all" href="https://pother.ca/CssBase/css/ribbon.css" />
   <link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
+  {% include page-specific-css.lqd url=page.url %}
 </head>
 {% include page-classname.lqd url=page.url %}
 <body class="{{ classnames }}">
