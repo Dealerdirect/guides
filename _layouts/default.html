@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
 </head>
-
-<body>
-
+{% include page-classname.lqd url=page.url %}
+<body class="{{ classnames }}">
   <article class="markdown-body">
 
     {% include breadcrumb.lqd %}
