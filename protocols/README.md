@@ -18,3 +18,7 @@ Protocols are available for the following scenario's:
 - [Deliverables](./development-process/deliverables/) -- Outlines who is 
  responsible for providing which deliverable during the software development 
  process.
+ 
+- [Work Approach Checklist](./development-process/work-approach-checklist/) -- Outlines who is 
+ responsible for providing which deliverable during the software development 
+ process.
