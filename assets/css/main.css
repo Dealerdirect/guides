@@ -28,14 +28,14 @@
 
 /* magnifying glass icon */
 .js-image-zoom::before{
-    background:url(/images/magnifying-glass.png);
-    content:'';
-    display:block;
-    height:33px;
-    position:absolute;
-    right:0;
-    top:0;
-    width:33px;
+    background: url(/images/magnifying-glass.png);
+    content: '';
+    display: block;
+    height: 33px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 33px;
 }
 
 /*=======( Breadcrumbs )======================================================*/
