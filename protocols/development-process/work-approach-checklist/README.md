@@ -44,13 +44,19 @@ Master or QA)
 
 -------------------------------------------------------------------------------
 
+## Start
+
+The whole process begins when someone has an idea about how to improve an 
+application so more value can be added for an end user.
+
+_Responsibility of_: (Someone representing the) <span class="role role-end-user">End User</span>
+
 ## ![](../images/idea.png) Idea Ticket
 
 ### 1. **Is the IDEA clear enough to create an IDEA ticket❔**
 
-When an <span class="role role-end-user">End User</span> or stakeholder has
-the idea that something should be changed or added to the system, it should be
-clear what problem the idea addresses.
+When an End User or stakeholder has the idea that something should be changed or 
+added to the system, it should be clear what problem the idea addresses.
 
 The product owner should be able to summarize the goal in one or two sentences.
 
