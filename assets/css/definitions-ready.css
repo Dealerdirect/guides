@@ -1,0 +1,12 @@
+
+.definitions-ready li {
+    font-size: 80%;
+}
+
+.definitions-ready h2,
+.definitions-ready .container h2 + ol li {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+/********( EOF )***************************************************************/

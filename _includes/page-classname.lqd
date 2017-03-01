@@ -1,0 +1,23 @@
+{% comment %}
+    This include creates class names from a given URL and assigns the result to
+    a variable names "classnames".
+
+    To use this include, include it from a template and then tuse the `classname`
+    variable.
+
+    Usage Example:
+
+        {% include page-classname.lqd url=page.url %}
+        <body class="{{ classnames }}">
+
+{% endcomment %}
+{% capture cache %}
+    {% assign classnames = include.url | remove: ".html" | split: "/" %}
+    {% assign slug = include.url | remove: '.html' | slugify %}
+
+    {% if slug == "" %}
+        {% assign classnames = "home" %}
+    {% elsif classnames contains slug %}
+        {% assign slug = slug | append: "-home" %}
+    {% endif %}
+{% endcapture %}{% assign cache = nil %}{% capture classnames %}{{slug}}{{ classnames | join: ' ' }}{% endcapture %}

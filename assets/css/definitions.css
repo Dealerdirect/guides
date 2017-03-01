@@ -1,0 +1,24 @@
+
+.definitions .container li {
+    font-weight: bold;
+}
+
+.definitions-home .container li {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+@media print {
+    .definitions h1,
+    .definitions blockquote
+    {
+        display: none;
+    }
+
+    .definitions-home h1,
+    .definitions-home blockquote {
+        display: block;
+    }
+}
+
+/********( EOF )***************************************************************/

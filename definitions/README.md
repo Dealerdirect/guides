@@ -44,6 +44,9 @@ ceremonies and artifacts.
 The following definitions are available:
 
 - [Daily Stand-up](./daily-standup/)
+- [Definition of Blocking](./blocking/)
+- [Definition of Done](./done/)
+- [Definition of Ready](./ready/)
 
-[speaker]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAi0lEQVQokWNgQAYyQFzGsIJBnwED8DNcBpK+DM8YfjMUokqxMRxg+A9m8TJsBLLSEFKMDCuBAv/hCncxfGWQhUn2gaVAktkMXkBSHmh0OwNU8D9csoHhO4MikN7BcAGb5H+GYiDdCTQYq2QubkkkY/E6CLtXdiJ7BTMQMnAHXxFm6IICvhwY8AYQLgCw2U9d90B8BAAAAABJRU5ErkJggg==
+[speaker]: ../images/speaker.png
 [quote.mp3]: https://ssl.gstatic.com/dictionary/static/sounds/de/0/quote.mp3

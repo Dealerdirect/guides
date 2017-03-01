@@ -1,3 +1,7 @@
+---
+permalink: /code-styling/markdown/
+---
+
 # Dealerdirect style guide: Markdown
 
 > _“Life moves so fast. You gotta document the good times, man.”_ ~ Big Boi

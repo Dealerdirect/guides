@@ -1,6 +1,7 @@
 B.V.
 backtick
 backticks
+Bitbucket
 Blockquotes
 Dealerdirect
 dealerdirect.nl
@@ -18,6 +19,7 @@ php
 rubocop
 sublicense
 toc
+Todo
 txt
 UTF-8
 whitespace
@@ -35,6 +37,7 @@ sexualized
 
 - ./code-styling/javascript/README.md
 Airbnb
+Shoff
 
 - ./code-styling/markdown/README.md
 Boi

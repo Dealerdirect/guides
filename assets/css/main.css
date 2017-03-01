@@ -1,0 +1,68 @@
+/********( CSS Index )*********************************************************/
+/*
+    0. CSS Introduction
+    1. General Style
+    2. Javascript Zoom
+    3. Breadcrumbs
+    4. Print Styles
+ */
+
+/********( CSS Introduction )**************************************************/
+/*
+    This file contains generic style rules that are used across all pages.
+*/
+/*=======( General Style )====================================================*/
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    position: relative;
+}
+
+/*=======( Javascript Zoom )==================================================*/
+.js-image-zoom {
+    border: 1px solid #EEE;
+}
+
+/* magnifying glass icon */
+.js-image-zoom::before{
+    background: url(/images/magnifying-glass.png);
+    content: '';
+    display: block;
+    height: 33px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 33px;
+}
+
+/*=======( Breadcrumbs )======================================================*/
+ol.breadcrumbs {
+    padding: 0;
+}
+.breadcrumbs__item {
+    display: inline-block;
+}
+.breadcrumbs__item:before {
+    /* Uses » to separate breadcrumbs */
+    content: '\00BB';
+}
+.breadcrumbs__item:first-child:before {
+    display: none;
+}
+
+/*=======( Print Styles )=====================================================*/
+@media print {
+    .banner,
+    .breadcrumbs {
+        display: none;
+    }
+
+    .markdown-body {
+        padding: 0;
+    }
+}
+
+/********( EOF )***************************************************************/
