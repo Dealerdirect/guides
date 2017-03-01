@@ -4,6 +4,7 @@
     1. General Style
     2. Javascript Zoom
     3. Breadcrumbs
+    4. Print Styles
  */
 
 /********( CSS Introduction )**************************************************/
@@ -50,6 +51,18 @@ ol.breadcrumbs {
 }
 .breadcrumbs__item:first-child:before {
     display: none;
+}
+
+/*=======( Print Styles )=====================================================*/
+@media print {
+    .banner,
+    .breadcrumbs {
+        display: none;
+    }
+
+    .markdown-body {
+        padding: 0;
+    }
 }
 
 /********( EOF )***************************************************************/
