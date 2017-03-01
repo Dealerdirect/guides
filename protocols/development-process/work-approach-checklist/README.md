@@ -6,8 +6,40 @@ permalink: /protocols/development-process/work-approach-checklist/
 
 # Work approach checklist
 
-- auto-gen TOC:
-{:toc}
+## Table of contents
+
+<!-- toc -->
+
+- [Introduction](#introduction)
+
+- [Start](#start)
+
+- ![](../images/idea.png) **Idea Ticket**
+
+  - [1. **Is the IDEA clear enough to create an IDEA ticket❔**](#1-is-the-idea-clear-enough-to-create-an-idea-ticket)
+  - [2. **What is the impact of the idea on the business❔**](#2-what-is-the-impact-of-the-idea-on-the-business)
+  - [3. **What is the impact of the idea on the current system❔**](#3-what-is-the-impact-of-the-idea-on-the-current-system)
+  - [4. **Which dependencies does the idea have❔**](#4-which-dependencies-does-the-idea-have)
+
+- ![](../images/proposal.png) **Proposal Ticket**
+
+  - [5. **Can a PROPOSAL be created from the available information❔**](#5-can-a-proposal-be-created-from-the-available-information)
+  - [6. **Are all of the specifications clear❔**](#6-are-all-of-the-specifications-clear)
+
+- ![](../images/epic.png) **Epic Ticket**
+
+  - [7. **Can a PROJECT be created from the available information❔**](#7-can-a-project-be-created-from-the-available-information)
+  - [8. **Have all low-level dependencies been met❔**](#8-have-all-low-level-dependencies-been-met)
+
+- ![](../images/story.png) **Story Ticket**
+
+  - [9. **Can a high-level description be created❔**](#9-can-a-high-level-description-be-created)
+
+- ![](../images/task.png) **Task Ticket** ![](../images/subtask.png) **Sub-Task Ticket**
+
+  - [10. **Can a low-level work ticket be created❔**](#10-can-a-low-level-work-ticket-be-created)
+
+<!-- tocstop -->
 
 ## Introduction
 
