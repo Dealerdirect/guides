@@ -6,8 +6,8 @@ permalink: /quotes/
 
 ## Introduction
 
-This document contains quotes on various topics that have not yet been used in 
-this repository. When looking for a quote to add to a page, usually, more quotes 
+This document contains quotes on various topics that have not yet been used in
+this repository. When looking for a quote to add to a page, usually, more quotes
 are found. Instead of ignoring other quotes, they can be added to this page. This
 saves others the effort of having to hunt for usable quotes.
 
@@ -30,7 +30,7 @@ This will be displayed thus:
 - > _“If anyone wants to know what the definition of 'dope' means, it's: 'Definition of Public Enemy.'”_
   > ~ Flavor Flav
 
-- > _“Definition, rationality, and structure are ways of seeing, but they become prisons when they blank out other ways 
+- > _“Definition, rationality, and structure are ways of seeing, but they become prisons when they blank out other ways
   > of seeing.”_
   > ~ A. R. Ammons
 
@@ -40,7 +40,7 @@ This will be displayed thus:
 - > _“My definition of 'innovative' is providing value to the customer.”_
   > ~ Mary Barra
 
-- > _“The definition of an 'operating system' is bound to evolve with customer demands and technological 
+- > _“The definition of an 'operating system' is bound to evolve with customer demands and technological
   > possibilities.”_
   > ~ Virginia Postrel
 
@@ -89,6 +89,56 @@ This will be displayed thus:
 
 - > _“We want to get 80%-85% of predictions right, not 100%. Or else we calibrated our estimates in the wrong way.”_
   > ~ Nate Silver
+
+### Pain
+
+- > _“We must all suffer one of two things: the pain of discipline or the pain of regret or disappointment.”_
+  > ~ Jim Rohn
+
+- > _“Most people want to avoid pain, and discipline is usually painful.”_
+  > ~ John C. Maxwell
+
+- > _“There is no birth of consciousness without pain.”_
+  > ~ Carl Jung
+
+- > _“Pain is temporary. Quitting lasts forever.”_
+  > ~ Lance Armstrong
+
+- > _“Behind every beautiful thing, there's some kind of pain.”_
+  > ~ Bob Dylan
+
+- > _“Tragedy should be utilized as a source of strength.”_
+  > ~ Tibetan saying
+
+- > _“I can bear any pain as long as it has meaning.”_
+  > ~ Haruki Murakami
+
+- > _“We don’t even ask happiness, just a little less pain.”_
+  > ~ Charles Bukowski
+
+- > _“These pains you feel are messengers. Listen to them.”_
+  > ~ Jalaluddin Rumi
+
+- > _“Pain is only what you allow it to be”_
+  > ~ Cassandra Clare
+
+- > _“No one can escape life's pain. That's life.”_
+  > ~ Pierce Brosnan
+
+- > _“Pleasure and freedom from pain, are the only things desirable as ends.”_
+  > ~ John Stuart Mill
+
+- > _“If you don't know about pain and trouble, you're in sad shape. They make you appreciate life.”_
+  > ~ Evel Knievel
+
+- > _“People have so much pain inside them that they're not even aware of.”_
+  > ~ Marina Abramovic
+
+- > _“Pain is never permanent.”_
+  > ~ Saint Teresa of Avila
+
+- > _“The unending paradox is that we do learn through pain.”_
+  > ~ Madeleine L'Engle
 
 ### Protocol
 
