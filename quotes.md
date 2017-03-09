@@ -25,6 +25,14 @@ This will be displayed thus:
 
 ## Quotes
 
+<!--
+Comment used in the .gitkeep files:
+
+- > _“Without requirements or design, programming is the art of adding bugs to an empty text file.”_
+  > ~ Louis Srygley
+
+-->
+
 ### Definitions
 
 - > _“If anyone wants to know what the definition of 'dope' means, it's: 'Definition of Public Enemy.'”_

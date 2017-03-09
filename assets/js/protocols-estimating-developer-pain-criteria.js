@@ -2,6 +2,8 @@
 
     'use strict';
 
+    var g_aCriteria = [], g_oPoints;
+
     function addEventHandler(p_sSubject, p_oPoints, p_oCriteria, p_iCriteriaIndex) {
         var sOpposite;
 
@@ -64,11 +66,11 @@
             oCriteria[sKey] = $(p_oCellElement);
         });
 
-        aCriteria.push(oCriteria);
+        g_aCriteria.push(oCriteria);
     }
 
     function main (p_sTableSelector) {
-        var aCriteria = [], oPoints, $Help, $Score, $Table;
+        var $Help, $Score, $Table;
 
         $Table = $(p_sTableSelector);
 
@@ -86,11 +88,11 @@
         $Score.insertBefore($Table.parent());
         $Help.insertAfter($Score);
 
-        oPoints = {'lower': 10 / aCriteria.length, 'upper': 100 / aCriteria.length};
+        g_oPoints = {'lower': 10 / g_aCriteria.length, 'upper': 100 / g_aCriteria.length};
 
-        $.each(aCriteria, function (p_iCriteriaIndex, p_oCriteria) {
-            addEventHandler('lower', oPoints, p_oCriteria, p_iCriteriaIndex);
-            addEventHandler('upper', oPoints, p_oCriteria, p_iCriteriaIndex);
+        $.each(g_aCriteria, function (p_iCriteriaIndex, p_oCriteria) {
+            addEventHandler('lower', g_oPoints, p_oCriteria, p_iCriteriaIndex);
+            addEventHandler('upper', g_oPoints, p_oCriteria, p_iCriteriaIndex);
 
         });
     }
