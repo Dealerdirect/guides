@@ -1,36 +1,12 @@
-
-.criteria .criteria__selector {
-    cursor: pointer;
-
-}
-
-.criteria .criteria__selector:hover {
-    background-color: lightyellow;
-
-}
-
-.criteria .criteria__selector--selected,
-.criteria .criteria__selector--selected:hover {
-    border-color: #69B;
-    background-color: #ADF;
-}
-
-.criteria .criteria__score {
-    font-size: 10em;
-    max-width: 100%;
-    text-align: center;
-}
-
-.criteria .criteria__help {
+.criteria__help {
     background: #ADF;
     border: 1px solid #69B;
     display: block;
-    margin: 1em;
     padding: 1em;
     text-align: center;
 }
 
-.criteria .criteria__help .octicon-info {
+.criteria__help-icon {
     background: #FFF;
     border-radius: 100%;
     color: #69b;
@@ -41,8 +17,25 @@
     width: 0.8em;
 }
 
-.criteria sup {
-    display: none;
+.criteria__selector {
+    cursor: pointer;
+}
+
+.criteria__selector:hover {
+    background-color: lightyellow;
+}
+
+.criteria__selector--selected,
+.criteria__selector--selected:hover {
+    border-color: #69B;
+    background-color: #ADF;
+}
+
+/* Adding <input> selector to overwrite `.markdown-body input` from the GH style */
+input.criteria__score {
+    font-size: 10em;
+    max-width: 100%;
+    text-align: center;
 }
 
 /*EOF*/
