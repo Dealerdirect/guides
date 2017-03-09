@@ -1,0 +1,48 @@
+
+.criteria .criteria__selector {
+    cursor: pointer;
+
+}
+
+.criteria .criteria__selector:hover {
+    background-color: lightyellow;
+
+}
+
+.criteria .criteria__selector--selected,
+.criteria .criteria__selector--selected:hover {
+    border-color: #69B;
+    background-color: #ADF;
+}
+
+.criteria .criteria__score {
+    font-size: 10em;
+    max-width: 100%;
+    text-align: center;
+}
+
+.criteria .criteria__help {
+    background: #ADF;
+    border: 1px solid #69B;
+    display: block;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.criteria .criteria__help .octicon-info {
+    background: #FFF;
+    border-radius: 100%;
+    color: #69b;
+    font-size: 1.5em;
+    line-height: 0.8em;
+    margin: 0 0.5em 0 0;
+    vertical-align: bottom;
+    width: 0.8em;
+}
+
+.criteria sup {
+    display: none;
+}
+
+/*EOF*/
