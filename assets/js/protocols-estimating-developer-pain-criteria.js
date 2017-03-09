@@ -2,12 +2,12 @@
 
     'use strict';
 
-    var g_aCriteria = [], g_oPoints;
+    var g_aCriteria = [], g_oPoints, g_$Score;
 
     function addEventHandler(p_sSubject, p_oPoints, p_oCriteria, p_iCriteriaIndex) {
         var sOpposite;
 
-        switch (p_sSubject) {
+        switch (p_sSubject) {   
             case 'upper':
                 sOpposite = 'lower';
                 break;
@@ -24,12 +24,12 @@
             p_oCriteria[p_sSubject].addClass('criteria__selector--selected');
             p_oCriteria[sOpposite].removeClass('criteria__selector--selected');
 
-            sScoreJson = $Score.attr('data-score');
+            sScoreJson = g_$Score.attr('data-score');
             oScores = JSON.parse(sScoreJson);
 
             oScores[p_iCriteriaIndex] = p_oPoints[p_sSubject];
 
-            $Score.attr('data-score', JSON.stringify(oScores));
+            g_$Score.attr('data-score', JSON.stringify(oScores));
 
             iTotalScore = 0;
 
@@ -39,7 +39,7 @@
                 }
             }
 
-            $Score.val(Math.floor(iTotalScore) + '%');
+            g_$Score.val(Math.floor(iTotalScore) + '%');
         });
     }
 
@@ -70,13 +70,13 @@
     }
 
     function main (p_sTableSelector) {
-        var $Help, $Score, $Table;
+        var $Help, $Table;
 
         $Table = $(p_sTableSelector);
 
         $Table.find('tbody tr').each(retrieveRows);
 
-        $Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
+        g_$Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
 
         $Help = $('<p class="criteria__help">' +
             '<span class="octicon octicon-info criteria__help-icon"></span>' +
@@ -85,8 +85,8 @@
             '</p>'
         );
 
-        $Score.insertBefore($Table.parent());
-        $Help.insertAfter($Score);
+        g_$Score.insertBefore($Table.parent());
+        $Help.insertAfter(g_$Score);
 
         g_oPoints = {'lower': 10 / g_aCriteria.length, 'upper': 100 / g_aCriteria.length};
 
