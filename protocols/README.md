@@ -19,6 +19,9 @@ Protocols are available for the following scenario's:
  responsible for providing which deliverable during the software development 
  process.
  
+- [Developer Pain](./estimating/developer-pain/) -- A way to estimate high-level
+  cost for a given issue or ticket.
+ 
 - [Work Approach Checklist](./development-process/work-approach-checklist/) -- Outlines who is 
  responsible for providing which deliverable during the software development 
  process.
