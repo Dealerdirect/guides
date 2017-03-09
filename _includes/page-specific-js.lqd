@@ -1,0 +1,27 @@
+{% comment %}
+    Include a JS file for the given URL
+{% endcomment %}
+{% capture cache %}
+    {% assign parts = include.url | remove: ".html" |remove_first: '/' | split: "/" %}
+    {% assign slug = '' %}
+
+    {% for part in parts %}
+        {% assign part = part | slugify %}
+
+        {% if forloop.first == true %}
+            {% assign slug = slug | append: part %}
+        {% else %}
+            {% assign slug = slug | append: '-' | append: part %}
+        {% endif %}
+
+        {% assign filePath = slug | prepend: '/assets/js/' | append: '.js' %}
+
+        {% for static_file in site.static_files %}
+            {% if static_file.path == filePath %}
+                {% capture output %}
+  <script src="{{ filePath }}"></script>{% endcapture  %}
+                {% assign tags = tags | strip_newlines | append: output %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endcapture %}{% assign cache = nil %}{{ tags  }}
