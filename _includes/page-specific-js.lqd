@@ -1,5 +1,5 @@
 {% comment %}
-    Include a CSS file for the given URL
+    Include a JS file for the given URL
 {% endcomment %}
 {% capture cache %}
     {% assign parts = include.url | remove: ".html" |remove_first: '/' | split: "/" %}
@@ -15,12 +15,12 @@
             {% assign slug = slug | append: '-' | append: part %}
         {% endif %}
 
-        {% assign filePath = slug | prepend: '/assets/css/' | append: '.css' %}
+        {% assign filePath = slug | prepend: '/assets/js/' | append: '.js' %}
 
         {% for static_file in site.static_files %}
             {% if static_file.path == filePath %}
                 {% capture output %}
-  <link rel="stylesheet" media="all" href="{{ filePath | prepend:site.baseurl }}">{% endcapture  %}
+  <script src="{{ filePath | prepend:site.baseurl }}"></script>{% endcapture  %}
                 {% assign tags = tags | strip_newlines | append: output %}
             {% endif %}
         {% endfor %}

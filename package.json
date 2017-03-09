@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "alex": "^4.0.1",
+    "liquid-linter-cli": "^0.2.0",
     "markdown-spellcheck": "^0.11.0",
     "markdown-toc": "^1.1.0",
     "remark-cli": "^2.1.0",
@@ -24,10 +25,11 @@
   "scripts": {
     "lint:alex": "alex .",
     "lint:remark": "remark -f . --ignore-path '.gitignore'",
+    "lint:liquid": "find . -type f -regextype posix-extended -regex '.*\\.(html|lqd|md)' -not -path '*/\\.*' -not -path './node_modules/*' -not -path './_site/*' -print0 | xargs -0 -n1 liquid-linter",
     "lint:spellcheck": "find . -type f -name '*.md' -not -path './CHANGELOG.md' -not -path './node_modules/*' -not -path './_site/*' -print0 | xargs -0 -n1 mdspell --report --en-us --ignore-numbers --ignore-acronyms",
     "lint:spellcheck-interactive": "find . -type f -name '*.md' -not -path './node_modules/*' -print0 | xargs -0 -n1 mdspell --en-us --ignore-numbers --ignore-acronyms",
-    "lint": "npm run lint:alex && npm run lint:remark && npm run lint:spellcheck-interactive",
-    "test": "npm run lint:alex && npm run lint:remark && npm run lint:spellcheck"
+    "lint": "npm run lint:alex && npm run lint:remark && npm run lint:spellcheck-interactive && npm run lint:liquid",
+    "test": "npm run lint:alex && npm run lint:remark && npm run lint:spellcheck && npm run lint:liquid"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,8 @@
     1. General Style
     2. Javascript Zoom
     3. Breadcrumbs
-    4. Print Styles
+    4. Helper Classes
+    5. Print Styles
  */
 
 /********( CSS Introduction )**************************************************/
@@ -53,6 +54,11 @@ ol.breadcrumbs {
     display: none;
 }
 
+/*=======( Helper Classes )===================================================*/
+.hidden {
+    display: none;
+}
+
 /*=======( Print Styles )=====================================================*/
 @media print {
     .banner,
@@ -66,3 +72,28 @@ ol.breadcrumbs {
 }
 
 /********( EOF )***************************************************************/
+
+/*=======( Table of Content  )================================================*/
+/*/ Adding 'Contents' headline to the TOC /*/
+#table-of-contents
+#markdown-toc::before {
+     content: "Contents";
+     font-weight: bold;
+ }
+
+/*/ Using numbers instead of bullets for listing /*/
+#table-of-contents + ul {
+   list-style: decimal;
+}
+
+#table-of-contents + ul ul {
+    list-style: upper-roman;
+}
+
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    display: inline-block;
+    list-style: decimal;
+    padding: 1.5em;
+}
