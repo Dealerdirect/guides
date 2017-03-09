@@ -1,5 +1,5 @@
 {% comment %}
-    Include any CSS file for the given URL
+    Include a CSS file for the given URL
 {% endcomment %}
 {% capture cache %}
     {% assign parts = include.url | remove: ".html" |remove_first: '/' | split: "/" %}
