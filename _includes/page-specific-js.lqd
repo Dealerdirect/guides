@@ -4,6 +4,7 @@
 {% capture cache %}
     {% assign parts = include.url | remove: ".html" |remove_first: '/' | split: "/" %}
     {% assign slug = '' %}
+    {% assign tags = '' %}
 
     {% for part in parts %}
         {% assign part = part | slugify %}
@@ -19,9 +20,9 @@
         {% for static_file in site.static_files %}
             {% if static_file.path == filePath %}
                 {% capture output %}
-  <script src="{{ filePath }}"></script>{% endcapture  %}
+  <script src="{{ filePath | prepend:site.baseurl }}"></script>{% endcapture  %}
                 {% assign tags = tags | strip_newlines | append: output %}
             {% endif %}
         {% endfor %}
     {% endfor %}
-{% endcapture %}{% assign cache = nil %}{{ tags  }}
+{% endcapture %}{% assign cache = nil %}{{ tags }}
