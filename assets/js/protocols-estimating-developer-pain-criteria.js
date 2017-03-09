@@ -41,11 +41,7 @@
         });
     }
 
-    var aCriteria = [], oPoints, $Help, $Score, $Table;
-
-    $Table = $('.protocols-estimating-developer-pain-criteria table');
-
-    $Table.find('tbody tr').each(function (p_iRowIndex, p_oRowElement) {
+    function retrieveRows(p_iRowIndex, p_oRowElement) {
 
         var oCriteria = {};
 
@@ -69,24 +65,38 @@
         });
 
         aCriteria.push(oCriteria);
-    });
+    }
 
-    $Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
-    $Help = $('<p class="criteria__help">' +
-        '<span class="octicon octicon-info"></span>' +
-        'To calculate the developer pain for a given issue, ' +
-        'please select the most appropriate cells in the table below.' +
-        '</p>'
-    );
+    function main (p_sTableSelector) {
+        var aCriteria = [], oPoints, $Help, $Score, $Table;
 
-    $Score.insertBefore($Table.parent());
-    $Help.insertAfter($Score);
+        $Table = $(p_sTableSelector);
 
-    oPoints = {'lower': 10 / aCriteria.length, 'upper': 100 / aCriteria.length};
+        $Table.find('tbody tr').each(retrieveRows);
 
-    $.each(aCriteria, function (p_iCriteriaIndex, p_oCriteria) {
-        addEventHandler('lower', oPoints, p_oCriteria, p_iCriteriaIndex);
-        addEventHandler('upper', oPoints, p_oCriteria, p_iCriteriaIndex);
+        $Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
 
-    });
+        $Help = $('<p class="criteria__help">' +
+            '<span class="octicon octicon-info criteria__help-icon"></span>' +
+            'To calculate the developer pain for a given issue, ' +
+            'please select the most appropriate cells in the table below.' +
+            '</p>'
+        );
+
+        $Score.insertBefore($Table.parent());
+        $Help.insertAfter($Score);
+
+        oPoints = {'lower': 10 / aCriteria.length, 'upper': 100 / aCriteria.length};
+
+        $.each(aCriteria, function (p_iCriteriaIndex, p_oCriteria) {
+            addEventHandler('lower', oPoints, p_oCriteria, p_iCriteriaIndex);
+            addEventHandler('upper', oPoints, p_oCriteria, p_iCriteriaIndex);
+
+        });
+    }
+
+    $('.criteria sup').addClass('hidden');
+
+    main('.protocols-estimating-developer-pain-criteria table');
+
 })(document, jQuery);
