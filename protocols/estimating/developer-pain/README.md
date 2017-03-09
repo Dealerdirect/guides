@@ -53,7 +53,6 @@ The criteria are meant to be opposing values. For instance:
 
 - Will an issue be Easy or Hard to implement?
 
-
 ## Ranking
 
 Instead of using a three dimensional rating scale, Developer Pain uses a two
