@@ -78,6 +78,8 @@
 
         g_$Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
 
+        g_$Score.Stickyfill();
+
         $Help = $('<p class="criteria__help">' +
             '<span class="octicon octicon-info criteria__help-icon"></span>' +
             'To calculate the developer pain for a given issue, ' +
