@@ -4,16 +4,16 @@ permalink: /code-styling/bash/
 
 # Dealerdirect style guide: BASH
 
-> _“We must all suffer one of two things: the pain of discipline or the pain of regret or disappointment.”_ 
+> _“We must all suffer one of two things: the pain of discipline or the pain of regret or disappointment.”_
 > ~ Jim Rohn
 
-This guide defines the BASH coding standards we use at Dealerdirect. The intent of 
-this guide is to help developers create BASH scripts that are readable, portable 
+This guide defines the BASH coding standards we use at Dealerdirect. The intent of
+this guide is to help developers create BASH scripts that are readable, portable
 easy to maintain and bug-free.
 
 Although there are a few style guide for BASH, none of them seems to be exhaustive
 or detailed enough.
- 
+
 As a result, the Dealerdirect BASH style guide was born.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
@@ -49,13 +49,13 @@ interpreted as described in [RFC 2119][rfc2119].
 - [Declaration](#declaration)
 
   - [Arrays](#arrays)
-  
+
   - [Checks](#checks)
-  
+
   - [Command options](#command-options)
-  
+
   - [Command substitution](#command-substitution)
-  
+
   - [Functions](#functions)
 
     - [Function packaging](#function-packaging)
@@ -90,7 +90,7 @@ interpreted as described in [RFC 2119][rfc2119].
 
 ### File names
 
-- File names MAY NOT contain characters other than letters (a to z), numbers (0 
+- File names MAY NOT contain characters other than letters (a to z), numbers (0
   to 9), hyphen, `-` and dot `.`.
 
 - File names MUST NOT start or end with a hyphen or dot.
@@ -99,41 +99,41 @@ interpreted as described in [RFC 2119][rfc2119].
 
 - Files that are meant to be call directly MUST NOT have a file extension.
 
-- Files that are meant to be _sourced_ (included from other files) MUST have the 
+- Files that are meant to be _sourced_ (included from other files) MUST have the
   `.sh` file extension.
 
 ### File properties
 
 - Files that are meant to be call directly MUST be made executable (with `chmod a+x`).
 
-- Files that are meant to be _sourced_ (included from other files) MUST NOT be 
+- Files that are meant to be _sourced_ (included from other files) MUST NOT be
   executable.
 
 ## BASH options
 
-- A BASH script MUST use `#!/usr/bin/env bash` as [shebang][shebang]. The less 
-  portable `#!/bin/bash` MUST NOT be used. 
+- A BASH script MUST use `#!/usr/bin/env bash` as [shebang][shebang]. The less
+  portable `#!/bin/bash` MUST NOT be used.
 
 - Always enable the following options (using `set -o option`):
 
-  - `errexit` Exit script when a command exits with non-zero status.   
+  - `errexit` Exit script when a command exits with non-zero status.
   - `errtrace` Exit on error inside any functions or sub-shells.
   - `nounset` Exit script on use of an undefined variable.
   - `pipefail` Return exit status of the last command in the pipe that exited with a non-zero exit code
 
 <!-- ======================================================================= -->
 
-## Comments / Documentation 
+## Comments / Documentation
 
 - Usage documentation SHOULD always be provided, no matter how short the script.
 
 - Every functions MUST preceded by a comment explaining it's usage.
 
-- The license MUST be either `proprietary` (for internal company scripts) or 
+- The license MUST be either `proprietary` (for internal company scripts) or
   `MIT` (for generic scripts that are open-sourced).
 
 - If the `proprietary` license is used the following header MUST be used:
-  
+
   ```txt
   # ==============================================================================
   # Proprietary License -- All Rights Reserved
@@ -143,8 +143,8 @@ interpreted as described in [RFC 2119][rfc2119].
   ```
 
 - If the `MIT` license is used the following header MUST be used:
-  
-  ```txt  
+
+  ```txt
   # ==============================================================================
   # MIT License
   #
@@ -176,32 +176,32 @@ interpreted as described in [RFC 2119][rfc2119].
 
 - Separate exit codes MUST be declared for different errors.
 
-- Exit codes MUST be defined as individual read-only global variables, 
+- Exit codes MUST be defined as individual read-only global variables,
   like this:
-  
+
   ```bash
   readonly EX_OK=0                        # Successful termination
   readonly EX_NOT_ENOUGH_PARAMETERS=65    # Not enough parameters given
   ```
 
-- An exit code MUST always be set regardless if errors occurred. 
+- An exit code MUST always be set regardless if errors occurred.
   Zero `0` means no error occurred.
 
 - An error message describing the error SHOULD be displayed before exiting on error.
 
-- Error messages MUST be redirected to STDERR. 
+- Error messages MUST be redirected to STDERR.
   This makes it easier to separate normal status from actual issues.)
 
-- The following exit codes MUST NOT be used as they already have a specific 
+- The following exit codes MUST NOT be used as they already have a specific
   meaning:
-  
+
   - `1` Catchall for general errors
   - `2` Misuse of shell builtins
   - `126` Invoked command is not executable
   - `127` "command not found"
   - `128` Invalid argument to exit
   - `128+n` Fatal error signal "`n`"
-  - `130` Script terminated by <kbd>Control</kbd>-<kbd>C</kbd>
+  - `130` Script terminated by <kbd>Control</kbd> <kbd>C</kbd>
   - `255*` Numbers above `255` loop round from `0`
 
 - To distinguish them from system errors, exit codes other than `0` SHOULD start
@@ -218,7 +218,7 @@ interpreted as described in [RFC 2119][rfc2119].
 - Lines SHOULD be less than 80 characters and MUST be less than 120 characters;
   longer lines SHOULD be split into multiple subsequent lines.
 
-### Whitespace 
+### Whitespace
 
 #### Lines
 
@@ -226,7 +226,7 @@ interpreted as described in [RFC 2119][rfc2119].
 
 - There SHOULD NOT be trailing whitespace at the end of any line.
 
-- Consecutive blank lines MAY be added to improve readability and to indicate 
+- Consecutive blank lines MAY be added to improve readability and to indicate
   related blocks of code.
 
 - If a pipeline fits on one line, it SHOULD be on one line. To improve
@@ -234,21 +234,36 @@ interpreted as described in [RFC 2119][rfc2119].
 
 - If a pipeline does not fit on one line it MUST be split across several lines.
 
-- When splitting, a line MUST be indented and begin with a pipe '|' or logical 
-  compound ('||' and '&&').  Example:
-  
+- When splitting, a line MUST be indented and begin with a pipe `|` or logical
+  compound (`||` and `&&`).  Example:
+
   ```bash
   command \
       | pipe \
       && other
   ```
 
-- The `; do` and `; then` keywords MUST be on the same line as the `while`, `for` 
-  or `if` it belongs to.
+- The `; do` and `; then` keywords MUST NOT be on a line by themselves. With
+  short statements they MUST be on the same line as the `while`, `for` or `if`
+  they belong to. For multi-line statement, they should be placed after the last
+  statement. Example:
+
+  ```bash
+  for i in "${a[@]}";do
+      …
+  done
+
+  if [[ long
+    && multi_line
+    && check
+  ]] ;then
+    …
+  fi
+  ```
 
 <!-- ======================================================================= -->
 
-## Declaration 
+## Declaration
 
 ### Arrays
 
@@ -262,48 +277,49 @@ interpreted as described in [RFC 2119][rfc2119].
   to `test` MUST NOT be used.
 
 - To avoid confusion about what is being tested for `-z` or `-n` MUST be used.
-  Use `[[ -z $variable ]]`  or `[[ -n $variable ]]` rather than just `[[ $variable ]]`.
+  Use `[[ -z ${variable} ]]`  or `[[ -n ${variable} ]]` rather than just
+  `[[ ${variable} ]]`.
 
-- A single equal sign SHOULD be used when checking values. Double or triple 
+- A single equal sign SHOULD be used when checking values. Double or triple
   signs SHOULD NOT be used.
-  Example: `[[ "${NAME}" = "John" ]]` 
+  Example: `[[ "${NAME}" = "John" ]]`
 
-- When referring to the current file `${BASH_SOURCE[0]}` SHOULD be used, even if 
+- When referring to the current file `${BASH_SOURCE[0]}` SHOULD be used, even if
   it is sourced from a parent script. In other cases, `${0}` SHOULD be used.
 
-- As the `errexit` flag is used, `|| true` MUST be appended to commands that 
+- As the `errexit` flag is used, `|| true` MUST be appended to commands that
   might cause an error which should not halt the script. (For instance when the
   command output is assigned to a variable).
 
 ### Command options
 
-- Long options MUST be used if they are available, 
-  for instance, use  `logger --priority --verbose` instead of `logger -p -v`. 
+- Long options MUST be used if they are available, for instance, use
+  `logger --priority --verbose` instead of `logger -p -v`.
 
 ### Command substitution
 
 - Sub-shell syntax `$(command)` MUST be used for command substitution rather
-  than backticks  <code>\`command`</code>.
+  than backticks  <code>`command`</code>.
 
 ### Functions
 
-- Except for function packaging code (see below) all code MUST go in a function. 
+- Except for function packaging code (see below) all code SHOULD go in a function.
   Even if it's just one `main` function.
 
-- Functions MUST be defined without the `function` keyword, with round brackets, 
+- Functions MUST be defined without the `function` keyword, with round brackets,
   like this: `myfunc() { ... }`
 
-- All functions MUST be located together in the file just below constants. 
+- All functions MUST be located together in the file just below constants.
   Executable code MUST NOT exists between functions.
 
-- Complex one-liners MUST be placed in standalone functions with an appropriate 
+- Complex one-liners MUST be placed in standalone functions with an appropriate
   name and description.
 
 #### Function packaging
 
-- If it should be possible to call certain code both directly _and_ sourced from 
-  other scripts, it MUST be wrapped in a "self" check, like this: 
-  
+- If it should be possible to call certain code both directly _and_ sourced from
+  other scripts, it MUST be wrapped in a "self" check, like this:
+
   ```bash
   if [ "${BASH_SOURCE[0]}" == "${0}" ]; then
       # direct call to file
@@ -318,36 +334,45 @@ interpreted as described in [RFC 2119][rfc2119].
 
 ### User messaging
 
-- User output SHOULD be formatted to follow the Heroku output format[^2](#references).
-- Warnings and errors MUST go to `STDERR`, anything than could be parsed SHOULD go to `STDOUT`.
+- User output SHOULD be formatted to follow the Heroku output format [^2](#references).
+
+- Warnings and errors generated by a script MUST go to `STDERR`. Warnings and
+  errors originating from command called from a script SHOULD go to `STDERR` but
+  MAY go to `STDOUT` as external command might not follow this convention.
+
+- Anything than could be parsed SHOULD go to `STDOUT`.
 
 ### Variables
 
-- Unless they are single character shell specials or arrays, variables MUST be 
-  "brace-quoted" (surrounded with curly braces `{` and `}`), 
-  like this: `${variable}`.  
+- Unless they are single character shell specials or arrays, variables MUST be
+  "brace-quoted" (surrounded with curly braces `{` and `}`),
+  like this: `${variable}`.
   Specials are `$!`, `$-`, `$_`, `$?`, `$#` `$*` `$@` `$$`.
 
 - Global variables SHOULD be avoided. When global variables _are_ used they MUST
   be declared as `readonly` as much as possible.
 
-- Variables that are function-specific MUST be declared as `local`, unless `local` 
-  can not be used. (For instance when declaring as an associative array). For 
+- Variables that are function-specific MUST be declared as `local`, unless `local`
+  can not be used. (For instance when declaring as an associative array). For
   such cases `declare` MUST be used.
- 
-- For the sake of clarity, read-only variables MUSt be declared using `readonly`.
+
+- For the sake of clarity, read-only variables MUST be declared using `readonly`.
   Read-only variables MUST NOT be declared using `declare -r`.
 
 - Declaration and assignment SHOULD be placed on different lines.
 
-- To test variables that could be undeclared dot-slash `:-` MUST be used
-  (like this: `${variable:-}`)
+- Variables that might not be set MUST set a sensible default, which MAY be
+  empty,using dot-slash `:-`, like this: `${variable:-}`.
+
+- BASH variable operators SHOULD be used rather than sub-shells or other commands.
+  For instance: instead of `echo "${variable}" | sed s/abc/xyz/g` simply use
+  `echo "${variable//abc/xyz}"`.
 
 <!-- ======================================================================= -->
 
 ## Common pitfalls
 
-Some more common problems and bugs in BASH can be avoided by adhering to the 
+Some more common problems and bugs in BASH can be avoided by adhering to the
 following conventions:
 
 ### Files and folders
@@ -369,15 +394,16 @@ following conventions:
 
 - For complex string formatting `printf` SHOULD be used rather than `echo`.
 
-- the `eval` command SHOULD be avoided.
+- the `eval` command SHOULD not be used for scripted code. It MAY be used on
+  output generated by other commands specifically for use with `eval`.
 
 ### General notes
 
 - Use `shellcheck` to lint BASH scripts (either locally or [online][shellcheck])
 
-- When in doubt, reference the BASH Guide for Beginners, the Advanced 
+- When in doubt, reference the BASH Guide for Beginners, the Advanced
   BASH-Scripting Guide the manual, the BASH FAQ, and/or the BASH Pitfalls pages:
-  
+
   - [BASH Beginners Guide][bash-beginners-guide]
   - [BASH Advanced Guide][bash-advanced-guide]
   - [BASH Manual][bash-manual]
