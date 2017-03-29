@@ -100,9 +100,6 @@ Comment used in the .gitkeep files:
 
 ### Pain
 
-- > _“We must all suffer one of two things: the pain of discipline or the pain of regret or disappointment.”_
-  > ~ Jim Rohn
-
 - > _“Most people want to avoid pain, and discipline is usually painful.”_
   > ~ John C. Maxwell
 
