@@ -160,9 +160,6 @@ Comment used in the .gitkeep files:
 - > _“The proper words in the proper places are the true definition of style.”_
   > ~ Jonathan Swift
 
-- > _“Style is a reflection of your attitude and your personality.”_
-  > ~ Shawn Ashmore
-
 - > _“In character, in manner, in style, in all things, the supreme excellence is simplicity.”_
   > ~ Henry Wadsworth Longfellow
 

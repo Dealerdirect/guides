@@ -9,6 +9,8 @@
 > but people whose opinions I really respect and who I will turn to.”_
 > ~ Jake Gyllenhaal
 
+![][dealerdirect-logo]
+
 Dealerdirect guides for getting things done, be a programming role-model,
 code in style and being the better colleague.
 
@@ -111,14 +113,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-[travis]: https://travis-ci.org/DealerDirect/guides
-[travis-shield]: https://img.shields.io/travis/DealerDirect/guides.svg?style=flat-square
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2017.svg?style=flat-square
 [awesome-shield]: https://img.shields.io/badge/awesome%3F-yes-brightgreen.svg?style=flat-square
-[license-shield]: https://img.shields.io/github/license/dealerdirect/guides.svg?style=flat-square
 [contribution guidelines]: CONTRIBUTING.md
+[dealerdirect-logo]: ./assets/img/dealerdirect-logo.png
+[get in touch]: http://workingatdealerdirect.eu/open-sollicitatie/
+[license-shield]: https://img.shields.io/github/license/dealerdirect/guides.svg?style=flat-square
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2017.svg?style=flat-square
+[our vacancies]: http://workingatdealerdirect.eu/?post_type=vacancy&s=&department=99
 [this page]: https://github.com/dealerdirect/templates/graphs/contributors
 [thoughbot]: https://github.com/thoughtbot/guides
-[our vacancies]: http://workingatdealerdirect.eu/?post_type=vacancy&s=&department=99
-[get in touch]: http://workingatdealerdirect.eu/open-sollicitatie/
+[travis-shield]: https://img.shields.io/travis/DealerDirect/guides.svg?style=flat-square
+[travis]: https://travis-ci.org/DealerDirect/guides
 [workingatdealerdirect.eu]: http://www.workingatdealerdirect.eu
