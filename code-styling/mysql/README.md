@@ -15,6 +15,7 @@ interpreted as described in [RFC 2119][rfc2119].
 ## Table of Content
 
 - [Files](#files)
+
 - [Inline queries](#inline-queries)
 
   - [Queries in PHP files](#queries-in-php-files)
@@ -61,8 +62,8 @@ as a PHP file with sql queries.
 
 ### Queries in php files
 
-Queries SHOULD be in [Nowdoc][PHP Nowdoc format] format and MAY use
-[Heredoc][PHP Heredoc format]. The opening tag SHOULD be `<<<'SQL'` for Nowdoc 
+Queries SHOULD be in [Nowdoc][php nowdoc format] format and MAY use
+[Heredoc][php heredoc format]. The opening tag SHOULD be `<<<'SQL'` for Nowdoc 
 or `<<<SQL` for Heredoc.
 
 The query itself SHOULD NOT be indented. 
@@ -132,7 +133,7 @@ It is RECOMMENDED to have tables for all entities. This includes entities like
 
 Good table names:
 
-```
+```txt
 model
 vehicle_type
 color
@@ -140,7 +141,7 @@ color
 
 Bad table names:
 
-```
+```txt
 voertuig_type
 models
 vehicleType
@@ -149,10 +150,15 @@ vehicleType
 ### Columns
 
 - Column names MUST be in English
+
 - Column names MUST be in lower snake case
+
 - Column names MUST be singular
+
 - Columns for possibly undefined values MUST be nullable
+
 - Columns for required values MUST NOT be nullable
+
 - Columns MUST use the correct type for the information they need to store
 
 - Columns MAY have a default value. If a nullable column has a default value,
@@ -167,14 +173,14 @@ The `id` column
 
 Good column names:
 
-```
+```txt
 id
 vehicle_type_id
 ```
 
 Bad column names:
 
-```
+```txt
 ID
 vehicleTypeId
 ```
@@ -213,7 +219,7 @@ other table. The name of the column SHOULD be of the form `<referenced_table_nam
 
 - If `AND` and `OR` keywords are used in a `WHERE` clause or `ON` clause,
   brackets `()` are REQUIRED to specify precedence.
-  
+
 Good select queries:
 
 ```sql
@@ -433,7 +439,7 @@ names should be on separate lines, followed by an equals sign and the new value
 (all on the same line). If only one column will be updated, this MAY be on the
 same line as the `SET` keyword.
 
-Good udpate queries:
+Good update queries:
 
 ```sql
 UPDATE my_table
@@ -534,6 +540,7 @@ which to sort. If the line gets too long, column names MAY be given in a
 multiline sequence with one column per line.
 
 Good `ORDER BY` clauses:
+
 ```sql
 ORDER BY table_alias.column_a DESC
 
@@ -562,8 +569,6 @@ A `LIMIT` clause MUST be in either of the two following formats:
 - `LIMIT 10`
 - `LIMIT 20, 10`
 
-
-
 [rfc2119]: http://www.ietf.org/rfc/rfc2119.txt
-[PHP Heredoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc
-[PHP Nowdoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc
+[php heredoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc
+[php nowdoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc
