@@ -19,4 +19,4 @@ The following coding style guides are available:
 [bash-logo]: ../assets/img/bash-gnu-logo.png
 [js-logo]: ../assets/img/javascript-unofficial-logo.png
 [markdown-logo]: ../assets/img/markdown-unofficial-logo.png
-[mysql-logo]: ../assets/img/powered-by-mysql-logo.png
+[mysql-logo]: ../assets/img/mysql-logo.png

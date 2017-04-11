@@ -29,13 +29,23 @@ interpreted as described in [RFC 2119][rfc2119].
 - [Formatting](#formatting)
 
   - [Select queries](#select-queries)
+  
+    - [Subqueries](#subqueries)
+  
   - [Joins](#joins)
+
   - [Delete queries](#delete-queries)
+
   - [Insert queries](#insert-queries)
+
   - [Update queries](#update-queries)
+
   - [Other select criteria](#other-select-criteria)
+
   - [Grouping](#grouping)
+
   - [Ordering](#ordering)
+
   - [Limit](#limit)
 
 <!-- ======================================================================= -->
@@ -117,9 +127,10 @@ WHERE id > 10;';
 
 Table names
 
-- MUST be in English
+- MUST be in United States English
 - MUST be in lower snake case
 - MUST be singular
+- MUST NOT match [reserved words][mysql reserved words]
 
 Tables
 
@@ -149,11 +160,13 @@ vehicleType
 
 ### Columns
 
-- Column names MUST be in English
+- Column names MUST be in United States English
 
 - Column names MUST be in lower snake case
 
 - Column names MUST be singular
+
+- Column names SHOULD NOT match [reserved words][mysql reserved words]
 
 - Columns for possibly undefined values MUST be nullable
 
@@ -192,7 +205,7 @@ other table. The name of the column SHOULD be of the form `<referenced_table_nam
 
 ## Formatting
 
-- Keywords must be written in upper case
+- Keywords MUST be written in upper case
 - MySQL function names are considered keywords
 - Table names and column names MUST be written as they are defined, in lower case
 - Indents MUST be two spaces
@@ -202,6 +215,7 @@ other table. The name of the column SHOULD be of the form `<referenced_table_nam
 - Parameters SHOULD be specified by name
 - Operators MUST be surrounded by one space
 - Table names, column names and database names SHOULD NOT be surrounded with backticks
+- If a column name matches a keyword, the use of backticks is REQUIRED.
 
 ### Select queries
 
@@ -278,6 +292,91 @@ OR id < 50
 AND created_at > '2016-06-30 12:34:56'
 ```
 
+#### Subqueries
+
+Subqueries MUST be wrapped in parentheses and their result MUST be aliased.
+
+If a subquery is used in a `SELECT` statement, the opening parenthesis MUST be
+followed by a single space, the `SELECT` keyword, and the column name from which
+data will be selected in the subquery. This way the `SELECT` keyword is indented
+one level from the fields in the original query. Indenting levels for other
+lines MUST be based on the indenting level of the `SELECT` keyword.
+
+If a subquery is used in a `WHERE` clause, the opening parenthesis MUST be on
+the same line as the line in which the subquery belongs. It MUST be followed by
+a newline character and the subquery MUST be indented one level from the parent
+at that location.
+
+In both cases the closing parenthesis MUST be on a separate line and indented
+one level less than the subquery. In a `SELECT` statement it MUST be followed by
+a space, the keyword `AS`, another space, and an alias name. In a `WHERE` clause
+the `AS` keyword results in an invalid query.
+
+Good examples:
+
+```sql
+SELECT
+  pt.id,
+  pt.name,
+  ( SELECT COUNT(*)
+    FROM other_table AS ot
+    WHERE ot.parent_table_id = pt.id
+  ) AS sub
+FROM parent_table AS pt;
+
+-- Although this is valid, a JOIN would be more appropriate here.
+SELECT
+  pt.id,
+  pt.name
+FROM parent_table AS pt
+WHERE pt.other_table_id IN (
+  SELECT ot.id
+  FROM other_table AS ot
+  WHERE ot.id < 5
+);
+```
+
+Bad examples:
+
+```sql
+SELECT
+  pt.id,
+  pt.name, (
+  SELECT COUNT(*)
+  FROM other_table AS ot
+  WHERE ot.parent_table_id = pt.id
+  ) AS sub
+FROM parent_table AS pt;
+
+SELECT
+  pt.id,
+  pt.name,
+  ( SELECT COUNT(*)
+    FROM other_table AS ot
+    WHERE ot.parent_table_id = pt.id
+  )
+  AS sub
+FROM parent_table AS pt;
+
+SELECT
+  pt.id,
+  pt.name
+FROM parent_table AS pt
+WHERE pt.other_table_id IN ( SELECT ot.id
+  FROM other_table AS ot
+  WHERE ot.id < 5
+);
+
+SELECT
+  pt.id,
+  pt.name
+FROM parent_table AS pt
+WHERE pt.other_table_id IN (
+  SELECT ot.id
+  FROM other_table AS ot
+  WHERE ot.id < 5);
+```
+
 ### Joins
 
 - The `JOIN` keyword MUST NOT be used without specifying the join type
@@ -347,11 +446,12 @@ LEFT JOIN table2 AS t2
 
 ### Delete queries
 
-Delete queries SHOULD not be used.
+Delete queries SHOULD NOT be used. Instead a column to indicate that an item is
+deleted or an archive table MAY be used.
 
 If a delete query is required, the table from which the rows are deleted MUST be
-specified on the same line as the `DELETE FROM` keyword. Delete queries also
-MUST specify a WHERE clause.
+specified on the same line as the `DELETE FROM` keyword. Delete queries MUST
+specify a `WHERE` clause.
 
 Good delete queries:
 
@@ -388,7 +488,7 @@ Insert queries MUST specify all columns in which data will be inserted. Omitted
 columns MUST have a default value. The `id` column MUST NOT be specified in
 insert queries unless those queries are used in some kind of data replication.
 
-If an insert query specifies more than 5 columns, the `SET` syntax is
+If an insert query specifies more than five columns, the `SET` syntax is
 RECOMMENDED. In that case the `SET` keyword MUST follow the table name and the
 column names MUST be indented one level.
 
@@ -434,8 +534,8 @@ Update queries MUST have a `WHERE` clause that limits the number of rows that
 will be updated. The where clause MUST NOT be indented.
 
 The `UPDATE` keyword MUST be followed by the table name that will be affected.
-The `SET` keyword MUST be on the next line and and MUST not be indented. Column
-names should be on separate lines, followed by an equals sign and the new value
+The `SET` keyword MUST be on the next line and and MUST NOT be indented. Column
+names SHOULD be on separate lines, followed by an equals sign and the new value
 (all on the same line). If only one column will be updated, this MAY be on the
 same line as the `SET` keyword.
 
@@ -563,12 +663,14 @@ ORDER BY table_alias.column_a DESC, table_alias.column_b ASC, other_table_alias.
 ### Limit
 
 A `LIMIT` clause SHOULD only be used together with an `ORDER BY` clause.
+If an offset is given, it MUST follow directly behind the `LIMIT` keyword.
 
 A `LIMIT` clause MUST be in either of the two following formats:
 
 - `LIMIT 10`
-- `LIMIT 20, 10`
+- `LIMIT 10 OFFSET 20`
 
 [rfc2119]: http://www.ietf.org/rfc/rfc2119.txt
+[mysql reserved words]: https://dev.mysql.com/doc/refman/5.7/en/keywords.html
 [php heredoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc
 [php nowdoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc
