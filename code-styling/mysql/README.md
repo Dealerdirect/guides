@@ -15,16 +15,35 @@ interpreted as described in [RFC 2119][rfc2119].
 ## Table of Content
 
 - [Files](#files)
+- [Inline queries](#inline-queries)
+
+  - [Queries in PHP files](#queries-in-php-files)
+
 - [Database design](#database-design)
+
   - [Tables](#tables)
   - [Columns](#columns)
+  - [Foreign keys](#foreign-keys)
+
 - [Formatting](#formatting)
+
+  - [Select queries](#select-queries)
+  - [Joins](#joins)
+  - [Delete queries](#delete-queries)
+  - [Insert queries](#insert-queries)
+  - [Update queries](#update-queries)
+  - [Other select criteria](#other-select-criteria)
+  - [Grouping](#grouping)
+  - [Ordering](#ordering)
+  - [Limit](#limit)
 
 <!-- ======================================================================= -->
 
 ## Files
 
-This section only applies to files that only contain MySQL statements.
+This section only applies to files that only contain MySQL statements. Files
+that contain queries as part of programming code in another language SHOULD
+adhere to the naming conventions for that language.
 
 - All MySQL filenames MUST have the `.sql` extension.
 
@@ -34,6 +53,62 @@ This section only applies to files that only contain MySQL statements.
 - File names MUST NOT start or end with a hyphen or dot.
 
 - File names MUST NOT have consecutive hyphens or dots.
+
+## Inline queries
+
+Inline queries are sql queries in a file of another programming language, such
+as a PHP file with sql queries.
+
+### Queries in php files
+
+Queries SHOULD be in [Nowdoc][PHP Nowdoc format] format and MAY use
+[Heredoc][PHP Heredoc format]. The opening tag SHOULD be `<<<'SQL'` for Nowdoc 
+or `<<<SQL` for Heredoc.
+
+The query itself SHOULD NOT be indented. 
+
+Good example
+
+```php
+<?php
+class Foo
+{
+    public function bar()
+    {
+        $query = <<<'SQL'
+SELECT id
+FROM my_table
+WHERE id > 10;
+SQL;
+    }
+}
+```
+
+Bad example:
+
+```php
+<?php
+class Foo
+{
+    public function bar()
+    {
+        $query = <<<'SQL'
+        SELECT id
+        FROM my_table
+        WHERE id > 10;
+SQL;
+
+        $query = "SELECT id
+        FROM my_table
+        WHERE id > 10;";
+
+        $query = '
+SELECT id
+FROM my_table
+WHERE id > 10;';
+    }
+}
+```
 
 ## Database design
 
@@ -120,6 +195,7 @@ other table. The name of the column SHOULD be of the form `<referenced_table_nam
 - Queries SHOULD be parametrized statements
 - Parameters SHOULD be specified by name
 - Operators MUST be surrounded by one space
+- Table names, column names and database names SHOULD NOT be surrounded with backticks
 
 ### Select queries
 
@@ -306,6 +382,10 @@ Insert queries MUST specify all columns in which data will be inserted. Omitted
 columns MUST have a default value. The `id` column MUST NOT be specified in
 insert queries unless those queries are used in some kind of data replication.
 
+If an insert query specifies more than 5 columns, the `SET` syntax is
+RECOMMENDED. In that case the `SET` keyword MUST follow the table name and the
+column names MUST be indented one level.
+
 Insert queries MAY specify more than one row.
 
 Good insert queries:
@@ -313,6 +393,12 @@ Good insert queries:
 ```sql
 INSERT INTO my_table (column_a, column_b)
 VALUES ('A', 'B');
+
+INSERT INTO my_table SET
+  column_a = 'A',
+  column_with_long_name = 'B',
+  column_with_even_longer_name = 'C',
+  column_d = 'D';
 
 INSERT INTO my_table (
   column_a,
@@ -479,3 +565,5 @@ A `LIMIT` clause MUST be in either of the two following formats:
 
 
 [rfc2119]: http://www.ietf.org/rfc/rfc2119.txt
+[PHP Heredoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc
+[PHP Nowdoc format]: http://php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc
