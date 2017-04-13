@@ -273,6 +273,11 @@ SELECT
   YEAR(created_at) AS year_created
 FROM my_table
 WHERE id = 5;
+
+-- SHA1 is calculated only once here
+SELECT *
+FROM my_table
+WHERE column_a = SHA1('some text');
 ```
 
 Bad select queries:
@@ -291,11 +296,6 @@ WHERE
 SELECT column_a, column_b, column_c
 FROM my_table
 WHERE id < 100 AND created_at >= '2017-01-01';
-
--- SHA1 is calculated only once here
-SELECT *
-FROM my_table
-WHERE column_a = SHA1('some text');
 
 -- Missing brackets
 SELECT
