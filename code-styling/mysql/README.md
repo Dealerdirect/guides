@@ -234,6 +234,13 @@ other table. The name of the column SHOULD be of the form `<referenced_table_nam
 - If `AND` and `OR` keywords are used in a `WHERE` clause or `ON` clause,
   brackets `()` are REQUIRED to specify precedence.
 
+- You SHOULD NOT format fields that are returned. You MAY use functions to
+  retrieve only a part of a `DATE/TIME/DATETIME` field if you are only
+  interested in that part.
+
+- You SHOULD avoid filtering (in `WHERE` or `ON` clauses) on potentially large
+  data sets using column values as function inputs 
+
 Good select queries:
 
 ```sql
@@ -260,7 +267,12 @@ WHERE (
 ) OR (
   id < 50
   AND created_at > '2016-06-30 12:34:56'
-)
+);
+
+SELECT
+  YEAR(created_at) AS year_created
+FROM my_table
+WHERE id = 5;
 ```
 
 Bad select queries:
@@ -280,6 +292,11 @@ SELECT column_a, column_b, column_c
 FROM my_table
 WHERE id < 100 AND created_at >= '2017-01-01';
 
+-- SHA1 is calculated only once here
+SELECT *
+FROM my_table
+WHERE column_a = SHA1('some text');
+
 -- Missing brackets
 SELECT
   column_a,
@@ -289,7 +306,24 @@ FROM my_table
 WHERE id < 100
 AND created_at >= '2017-01-01'
 OR id < 50
-AND created_at > '2016-06-30 12:34:56'
+AND created_at > '2016-06-30 12:34:56';
+
+-- created_at MUST be stored in a DATETIME column; use `DATE(created_at)`
+-- if only the date is important in a specific case.
+-- Also, `DATE_FORMAT()` is output formatting that SHOULD be done when
+-- displaying the data, not when retrieving it. 
+SELECT
+  CONCAT(
+    DATE_FORMAT(created_date,'%d-%m-%Y'),
+    ' ',
+    DATE_FORMAT(created_time,'%H:%i')
+  ) AS created_at
+FROM my_table;
+
+-- Using a SHA1() function on each row of a potentially large data set
+SELECT *
+FROM my_table
+WHERE SHA1(column_a) = 'da39a3ee5e6b4b0d3255bfef95601890afd80709';
 ```
 
 #### Subqueries
@@ -446,8 +480,10 @@ LEFT JOIN table2 AS t2
 
 ### Delete queries
 
-Delete queries SHOULD NOT be used. Instead a column to indicate that an item is
-deleted or an archive table MAY be used.
+Delete queries should be used with care. The data model SHOULD prevent delete
+actions that would result in data inconsistency. You MAY want to flag items for
+deletion and perform the actual delete some time later using an automated
+script. This allows users to restore data marked for deletion.
 
 If a delete query is required, the table from which the rows are deleted MUST be
 specified on the same line as the `DELETE FROM` keyword. Delete queries MUST
