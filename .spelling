@@ -11,12 +11,18 @@ e.g.
 Estimatable
 Filenames
 filenames
+Heredoc
 http
 http:
 Javascript
 monospaced
+multiline
+MySQL
+Nowdoc
+nullable
 php
 rubocop
+sql
 sublicense
 toc
 Todo
@@ -52,6 +58,10 @@ Shoff
 - ./code-styling/markdown/README.md
 Boi
 Gruber
+
+- ./code-styling/mysql/README.md
+subqueries
+subquery
 
 - ./protocols/development-process/README.md
 Evo
