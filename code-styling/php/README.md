@@ -39,11 +39,7 @@ Dealerdirect also has a lot of existing code bases. Especially older code
 simply cannot fully comply with the PSR standards. This is why this guide has
 been developed.
 
-<p align="center">
-  <br>
-  ![Levels](images/levels.jpg)  
-  <br>
-</p>
+![Levels](images/levels.jpg)  
 
 This guide uses different levels of code style compliances. This in order to
 support new and legacy code. This gives us the ability to slowly upgrade the
@@ -53,7 +49,7 @@ level on each code base.
 
 > This is the lowest level possible to which at least every single piece of code
 > MUST comply with.
-
+>
 > - The code MUST be runnable!
 > - Detections for obvious bugs.
 
@@ -62,13 +58,13 @@ level on each code base.
 > This level only contains styling rules that SHALL NOT require any refactoring
 > of code and SHOULD NOT break any code. Therefor every code base SHOULD be able
 > to comply with this level.
-
+>
 > - Whitespace / new line related sniffs.
 
 ![gold] **Gold**
 
 > All code SHOULD be able to reach this level with some refactoring effort.
-
+>
 > - Deprecation & compatibility detections.
 > - Detection of use of forbidden function.
 > - Some basic code documentation checks.
@@ -78,7 +74,7 @@ level on each code base.
 
 > Not all code MAY be able to reach this level, especially older code bases.
 > Newly created codebases MUST comply at least to this level.
-
+>
 > - Full compliance with PSR-1, 2, 5 & 12.
 > - Micro optimisations.
 > - More extensive best practices.
@@ -86,7 +82,7 @@ level on each code base.
 ![diamond] **Diamond**
 
 > All newer created code bases SHOULD be able to comply with this level.
-
+>
 > - Code analysis
 > - Metrics
 
@@ -103,15 +99,16 @@ Throughout this document, any instructions MAY be ignored if they do not exist
 in versions of PHP supported by the specific project.
 
 **Icons used in this guide**:  
-![bronze] Checked by our Bronze PHP CodeSniffer ruleset  
-![silver] Checked by our Silver PHP CodeSniffer ruleset  
-![gold] Checked by our Gold PHP CodeSniffer ruleset  
-![platinum] Checked by our Platinum PHP CodeSniffer ruleset  
-![diamond] Checked by our Diamond PHP CodeSniffer ruleset  
-:tada: Can be automatically fixed by our PHP CodeSniffer rulesets  
-:passport_control: Checked by our PHP Storm configuration  
-:satellite: Checked by our [PHP Mess Detector][phpmd] rulset  
-:books: [PHP Framework Interop Group][php-fig] standard
+
+- ![bronze] Checked by our Bronze PHP CodeSniffer ruleset  
+- ![silver] Checked by our Silver PHP CodeSniffer ruleset  
+- ![gold] Checked by our Gold PHP CodeSniffer ruleset  
+- ![platinum] Checked by our Platinum PHP CodeSniffer ruleset  
+- ![diamond] Checked by our Diamond PHP CodeSniffer ruleset  
+- :tada: Can be automatically fixed by our PHP CodeSniffer rulesets  
+- :passport_control: Checked by our PHP Storm configuration  
+- :satellite: Checked by our [PHP Mess Detector][phpmd] rulset  
+- :books: [PHP Framework Interop Group][php-fig] standard
 
 ## 2. Basics
 
