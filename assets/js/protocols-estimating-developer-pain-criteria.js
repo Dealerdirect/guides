@@ -2,7 +2,7 @@
 
     'use strict';
 
-    var g_aCriteria = [], g_oPoints, g_$Score, $g_$Summary;
+    var g_aCriteria = [], g_oPoints, g_$Score, g_$Summary;
 
 
     function getOpposite(p_sSubject) {
@@ -82,13 +82,13 @@
 
         sOpposite = getOpposite(p_sSubject);
 
-        sSummaryJson = $g_$Summary.attr('data-summary');
+        sSummaryJson = g_$Summary.attr('data-summary');
         oSummary = JSON.parse(sSummaryJson);
         delete oSummary[p_oCriteria[sOpposite].text()];
         oSummary[p_oCriteria[p_sSubject].text()] = p_oPoints[p_sSubject];
 
-        $g_$Summary.attr('data-summary', JSON.stringify(oSummary));
-        $g_$Summary.val(JSON.stringify(oSummary));
+        g_$Summary.attr('data-summary', JSON.stringify(oSummary));
+        g_$Summary.val(JSON.stringify(oSummary));
     }
 
     function addEventHandler(p_sSubject, p_oPoints, p_oCriteria, p_iCriteriaIndex) {
@@ -113,8 +113,8 @@
         g_$Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
         g_$Score.Stickyfill();
 
-        $g_$Summary= $('<textarea class="criteria__summary" data-summary="{}" readonly />');
-        $g_$Summary.Stickyfill();
+        g_$Summary= $('<textarea class="criteria__summary" data-summary="{}" readonly />');
+        g_$Summary.Stickyfill();
 
         $Help = $('<p class="criteria__help">' +
             '<span class="octicon octicon-info criteria__help-icon"></span>' +
@@ -124,8 +124,8 @@
         );
 
         g_$Score.insertBefore($Table.parent());
-        $g_$Summary.insertAfter(g_$Score);
-        $Help.insertAfter($g_$Summary);
+        g_$Summary.insertAfter(g_$Score);
+        $Help.insertAfter(g_$Summary);
 
         g_oPoints = {'lower': 10 / g_aCriteria.length, 'upper': 100 / g_aCriteria.length};
 
