@@ -130,7 +130,7 @@ Developer pain could be used as an in-between step to help teams to go from
 "traditional" (time based) estimating to using story points. Developer pain 
 could eventually even be abandoned completely in favor of planning poker.
 
-[user pain]: http://www.lostgarden.com/2008/05/improving-bug-triage-with-user-pain.html
+[user pain]: ../user-pain/
 [tanstaafl]: https://en.wikipedia.org/wiki/There_ain't_no_such_thing_as_a_free_lunch
 [story points]: https://www.mountaingoatsoftware.com/blog/what-are-story-points
 [company specific developer pain criteria]:  ./criteria
