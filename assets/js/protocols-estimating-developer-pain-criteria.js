@@ -16,7 +16,7 @@
                 sOpposite = 'upper';
                 break;
             default:
-                throw new Error('Could not get opposite. Key "' + p_sSubject + '" not recognised');
+                throw new Error('Could not get opposite. Key "' + p_sSubject + '" not recognized');
                 break;
         }
 
