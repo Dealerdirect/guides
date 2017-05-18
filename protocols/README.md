@@ -21,7 +21,9 @@ Protocols are available for the following scenario's:
  
 - [Developer Pain](./estimating/developer-pain/) -- A way to estimate high-level
   cost for a given issue or ticket.
- 
+
+- [User Pain](./estimating/user-pain/) -- A way to estimate what benefit resolving a given issue or ticket will yield.
+
 - [Work Approach Checklist](./development-process/work-approach-checklist/) -- Outlines who is 
  responsible for providing which deliverable during the software development 
  process.
