@@ -21,12 +21,15 @@
     cursor: pointer;
 }
 
+.protocols-estimating-user-pain-criteria tr:hover td,
 .criteria__selector:hover {
     background-color: lightyellow;
 }
 
 .criteria__selector--selected,
-.criteria__selector--selected:hover {
+.criteria__selector--selected:hover,
+.criteria__selector--selected td,
+.criteria__selector--selected:hover td {
     border-color: #69B;
     background-color: #ADF;
 }
@@ -48,6 +51,7 @@ input.criteria__score {
     max-width: 100%;
     position: -webkit-sticky;
     position: sticky;
+    resize:none;
     text-align: center;
     top: 15em;
     width: 100%;

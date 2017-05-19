@@ -1,4 +1,4 @@
-(function (Root, $) {
+(function (Root, $, Pain) {
 
     'use strict';
 
@@ -23,8 +23,7 @@
         return sOpposite;
     }
 
-    function retrieveRows(p_iRowIndex, p_oRowElement) {
-
+    function retrieveCriteria(p_iRowIndex, p_oRowElement) {
         var oCriteria = {};
 
         $(p_oRowElement).find('td').each(function (p_iCellIndex, p_oCellElement) {
@@ -58,25 +57,6 @@
         p_oCriteria[p_sSubject].addClass('criteria__selector--selected');
     }
 
-    function updateScore(p_oPoints, p_sSubject, p_iCriteriaIndex) {
-        var iScoreIndex, iTotalScore, oScores, sScoreJson;
-
-        iTotalScore = 0;
-
-        sScoreJson = g_$Score.attr('data-score');
-        oScores = JSON.parse(sScoreJson);
-        oScores[p_iCriteriaIndex] = p_oPoints[p_sSubject];
-        g_$Score.attr('data-score', JSON.stringify(oScores));
-
-        for (iScoreIndex in oScores) {
-            if (oScores.hasOwnProperty(iScoreIndex)) {
-                iTotalScore += oScores[iScoreIndex];
-            }
-        }
-
-        g_$Score.val(Math.floor(iTotalScore) + '%');
-    }
-
     function updateSummary(p_oPoints, p_sSubject, p_oCriteria) {
         var oSummary, sOpposite, sSummaryJson;
 
@@ -92,47 +72,35 @@
     }
 
     function addEventHandler(p_sSubject, p_oPoints, p_oCriteria, p_iCriteriaIndex) {
-
         p_oCriteria[p_sSubject].addClass('criteria__selector criteria__selector--' + p_sSubject);
 
         p_oCriteria[p_sSubject].on('click', function (/*p_oEvent*/) {
-
             updateClasses(p_sSubject, p_oCriteria);
             updateSummary(p_oPoints, p_sSubject, p_oCriteria);
-            updateScore(p_oPoints, p_sSubject, p_iCriteriaIndex);
+            Pain.updateScore(g_$Score, p_oPoints, p_sSubject, p_iCriteriaIndex);
         });
     }
 
     function main (p_sTableSelector) {
-        var $Help, $Table;
+        var $Table, sMessage;
+
+        sMessage = 'To calculate the developer pain for a given issue, ' +
+            'please select the most appropriate cells in the table below.'
+        ;
 
         $Table = $(p_sTableSelector);
 
-        $Table.find('tbody tr').each(retrieveRows);
+        $Table.find('tbody tr').each(retrieveCriteria);
 
-        g_$Score = $('<input type="text" class="criteria__score" data-score="{}" readonly />');
-        g_$Score.Stickyfill();
-
-        g_$Summary= $('<textarea class="criteria__summary" data-summary="{}" readonly />');
-        g_$Summary.Stickyfill();
-
-        $Help = $('<p class="criteria__help">' +
-            '<span class="octicon octicon-info criteria__help-icon"></span>' +
-            'To calculate the developer pain for a given issue, ' +
-            'please select the most appropriate cells in the table below.' +
-            '</p>'
-        );
-
-        g_$Score.insertBefore($Table.parent());
-        g_$Summary.insertAfter(g_$Score);
-        $Help.insertAfter(g_$Summary);
+        g_$Score = Pain.createScoreElement($Table);
+        g_$Summary = Pain.createSummaryElement(g_$Score);
+        Pain.createHelpElement(g_$Summary, sMessage);
 
         g_oPoints = {'lower': 10 / g_aCriteria.length, 'upper': 100 / g_aCriteria.length};
 
         $.each(g_aCriteria, function (p_iCriteriaIndex, p_oCriteria) {
             addEventHandler('lower', g_oPoints, p_oCriteria, p_iCriteriaIndex);
             addEventHandler('upper', g_oPoints, p_oCriteria, p_iCriteriaIndex);
-
         });
     }
 
@@ -140,4 +108,4 @@
 
     main('.protocols-estimating-developer-pain-criteria table');
 
-})(document, jQuery);
+})(document, jQuery, document.Dealerdirect.Pain);
