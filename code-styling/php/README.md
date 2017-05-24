@@ -10,48 +10,22 @@ permalink: /code-styling/php/
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-
-    1.1. [PSR compatibility](#11-psr-compatibility)
-
-    1.2. [Levels](#12-levels)
-
-    1.3. [Icons used in this guide](#13-icons-used-in-this-guide)
-
-    1.4. [Conventions used in this guide](#14-conventions-used-in-this-guide)
-
-    1.5. [Terminology](#15-terminology)
-
-    1.6. [Notes](#16-notes)
-
 2. [Source file basics](#2-source-file-basics)
-
 3. [Basic formatting](#3-basic-formatting)
-
 4. [File structure](#4-file-structure)
-
 5. [PHP build-in functions, keywords and types](#5-php-build-in-functions-keywords-and-types)
-
 6. [Global variables and constants](#6-global-variables-and-constants)
-
 7. [Operators and assignment](#7-operators-and-assignment)
-
-8. [Inter-line assignment](#8-inter-line-assignment)
-
-9. [Control structures](#9-control-structures)
-
-10. [Functions](#10-functions)
-
-11. [Closures](#11-closures)
-
-12. [Classes, properties and methods](#12-classes-properties-and-methods)
-
-13. [Namespaces and use statements](#13-namespaces-and-use-statements)
-
-14. [Anonymous Classes](#14-anonymous-classes)
-
-15. [PHPDoc](#15-phpdoc)
-
-16. [Best practices](#16-best-practices)
+8. [Inter-line alignment](#8-inter-line-alignment)
+9. [Expressions](#9-expressions)
+10. [Control structures](#10-control-structures)
+11. [Functions](#11-functions)
+12. [Closures](#12-closures)
+13. [Classes, properties and methods](#13-classes-properties-and-methods)
+14. [Namespaces and use statements](#14-namespaces-and-use-statements)
+15. [Anonymous Classes](#15-anonymous-classes)
+16. [PHPDoc](#16-phpdoc)
+17. [Best practices](#17-best-practices)
 
 ## 1. Introduction
 
@@ -171,8 +145,8 @@ constructs which may be preceded by a comment or DocBlock. All of the following
 is part of this collection:
 
     - file
-    - require(_once)
-    - include(_once)
+    - require(\_once)
+    - include(\_once)
     - class
     - interface
     - trait
@@ -329,8 +303,9 @@ _:books: [PSR-12][psr-12]: 5. Control Structures
 
 ![silver] &#11034; &#11034; &#11034; &#11034;
 
-Opening braces MUST be on their own line and MUST NOT be preceded or followed
-by a blank line, unless explicitly mentioned differently.
+Opening braces MUST be on the same line, MUST NOT be preceded or followed
+by a blank line and MUST be preceded by a single space, unless explicitly
+mentioned differently.
 
 Any opening brace MUST NOT be followed by any comment or statement on the
 same line.
@@ -342,16 +317,15 @@ _:books: [PSR-12][psr-12]: 4.1. Extends and Implements_
 
 ![silver] &#11034; &#11034; &#11034; &#11034;
 
-Closing branced MUST be on their own line and MUST NOT be preceded by
+Closing braces MUST be on their own line and MUST NOT be preceded by
 a blank line, except where explicitly mentioned differently.
 
 Any closing brace MUST NOT be followed by any comment or statement on the same
 line, except where explicitly mentioned differently.
 
-_:books: [PSR-2][psr-2]: 4.1. Extends and Implements_
+_:books: [PSR-2][psr-2]: 5. Control Structure_
 _:books: [PSR-12][psr-12]: 4. Classes, Properties, and Methods_
 _:books: [PSR-12][psr-12]: 4.1. Extends and Implements_
-
 
 ## 4. File structure
 
@@ -417,22 +391,23 @@ _:books: [PSR-12][psr-12]: 2.5. Keywords and Types_
 
 ## 7. Operators and assignment
 
-> TODO: improve and extend.
+### 7.1. Formatting binary and ternary operators
 
 ![silver] &#11034; &#11034; &#11034; &#11034;
 
 All binary and ternary (but not unary) operators MUST be preceded and followed
-by at least one space. This includes all:
+by one space. This includes all:
 
-  - [Arithmetic operators][php-arithmetic-operators]
-  - [Assignment operators][php-assignment-operators]
-  - [Bitwise operators][php-bitwise-operators]
-  - [Comparison operators][php-comparison-operators]
-  - [Logical operators][php-logical-operators] (excluding `!` which is unary)
-  - [String operators][php-string-operators]
-  - [Type operators][php-type-operators]
-  - trait operators (`insteadof` and `as`)
-  - single pipe operator (e.g.`ExceptionType1 | ExceptionType2 $e`).
+- [Arithmetic operators][php-arithmetic-operators]
+- [Array operators][php-array-operators]
+- [Assignment operators][php-assignment-operators]
+- [Bitwise operators][php-bitwise-operators]
+- [Comparison operators][php-comparison-operators]
+- [Logical operators][php-logical-operators] (excluding `!` which is unary)
+- [String operators][php-string-operators]
+- [Type operators][php-type-operators]
+- [Trait operators][php-traits] (`insteadof` and `as`)
+- Single pipe operator (e.g.`ExceptionType1 | ExceptionType2 $e`).
 
 For example:
 
@@ -444,44 +419,406 @@ if ($a === $b) {
 }
 ```
 
-## 8. Inter-line assignment
+_:books: [PSR-12][psr-12]: 6. Operators_
 
-## 9. Control structures
+### 7.2. Formatting incrementing/decrementing operators
 
-## 10. Functions
+![silver] &#11034; &#11034; &#11034; &#11034;
 
-## 11. Closures
+All pre-incrementing and pre-decrementing operators MUST be preceded and
+MUST NOT be followed by one space.
 
-## 12. Classes, properties and methods
+All post-incrementing and post-decrementing operators MUST NOT be preceded and
+MUST be followed by one space.
 
-## 13. Namespaces and use statements
+For example:
 
-### 13.1.
+```php
+$a = 1337;
+echo 'Pre-incrementing: ' . ++$a . PHP_EOL;
+echo 'Post-decrementing: ' . $a++ . PHP_EOL;
+```
+
+### 7.3. Incrementing/decrementing operators
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+For incrementing and decrementing the respective operators MUST be used instead
+of "manual" addition or subtraction.
+
+For example:
+
+```php
+$a++
+```
+
+Instead of:
+
+```php
+$a = $a + 1;
+```
+
+### 7.4. Error control operators
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+The [error control operator][php-error-control-operators] `@` MUST NOT be used.
+
+### 7.5. Execution operators
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+The [execution operators][php-execution-operators] (backticks ` `` `) MUST not
+be used. The use of the execution operator is identical to
+[shell_exec()][php-function-shell-exec], which SHOULD be used instead.
+
+### 7.6. Logical operators
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The [logical operators][php-logical-operators] `&&` and `||` MUST be used
+instead of `and` and `or`.
+
+### 7.7. Strict comparison
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+Strict comparison SHOULD be used by default (`===`).
+
+## 8. Inter-line alignment
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+Inter-line alignment MUST NOT be used, unless explicitly mentioned differently.
+Don't align things like consecutive assignments (aligning equal signs) or
+list definitions (aligning arrows or semicolons).
+
+For example:
+
+```php
+$value = 'value';
+$user = [
+    name => 'John Doe',
+    password => 'VerySecret123',
+];
+$debug_mode = true;
+```
+
+Instead of:
+
+```php
+$value      = 'value';
+$user       = [
+                  name     => 'John Doe',
+                  password => 'VerySecret123',
+              ];
+$debug_mode = true;
+```
+
+## 9. Expressions
+
+## 10. Control structures
+
+### 10.1 General control structure formatting
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The general style rules for control structures are as follows:
+
+- There MUST be one space after the control structure keyword.
+- There MUST NOT be a space after the opening parenthesis.
+- There MUST NOT be a space before the closing parenthesis.
+- There MUST be one space between the closing parenthesis and the opening brace.
+
+_:books: [PSR-2][psr-2]: 5. Control Structures_  
+_:books: [PSR-12][psr-12]: 5. Control Structures_
+
+### 10.2. Enclosing the structure body
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The body of each control structure MUST be enclosed by braces. This standardizes
+how the structure looks, and reduces the likelihood of introducing errors as
+new lines get added to the body.
+
+_:books: [PSR-2][psr-2]: 5. Control Structures_  
+_:books: [PSR-12][psr-12]: 5. Control Structures_
+
+### 10.3. `if`, `elseif`, `else`
+
+An `if`, `elseif`, `else` control structure looks like the following:
+
+```php
+if ($expr1) {
+    // If body
+} elseif ($expr2) {
+    // Elseif body
+} else {
+    // Else body
+}
+```
+
+_:books: [PSR-2][psr-2]: 5.1. if, elseif, else_  
+_:books: [PSR-12][psr-12]: 5.1. if, elseif, else_
+
+#### 10.3.1. `elseif` vs `else if`
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The keyword `elseif` MUST be used instead of `else if` so that all control
+structure keywords look like single words.
+
+_:books: [PSR-2][psr-2]: 5.1. if, elseif, else_  
+_:books: [PSR-12][psr-12]: 5.1. if, elseif, else_
+
+#### 10.3.2. `else` and `elseif` after closing brace
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The keywords `else` and `elseif` MUST be placed on the same line as the
+closing brace of the previous body.
+
+_:books: [PSR-2][psr-2]: 5.1. if, elseif, else_  
+_:books: [PSR-12][psr-12]: 5.1. if, elseif, else_
+
+### 10.4. `switch`, `case`
+
+A `switch` control structure looks like the following:
+
+```php
+switch ($expr) {
+    case 0:
+        echo 'First case, with a break';
+        break;
+    case 1:
+        echo 'Second case, which falls through';
+        // no break
+    case 2:
+        // we need to break this third case
+        break;
+    case 3:
+    case 4:
+    case 5:
+        echo 'Fourth case, return instead of break';
+        return;
+    default:
+        echo 'Default case';
+        break;
+}
+```
+
+_:books: [PSR-2][psr-2]: 5.2. switch, case_  
+_:books: [PSR-12][psr-12]: 5.2. switch, case_
+
+#### 10.4.1. `case` indentation
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The `case` statement is considered part of the `switch` body and MUST be
+indented once.
+
+_:books: [PSR-2][psr-2]: 5.2. switch, case_  
+_:books: [PSR-12][psr-12]: 5.2. switch, case_
+
+#### 10.4.2. `switch` terminating keywords indentation
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+Keywords that terminate the `switch` statement are considered to be part of the
+`case` body and MUST be indented at the same level as the `case` body.
+
+The following keywords are considered `switch` terminating:
+
+- `break`
+- `die`
+- `exit`
+- `return`
+
+_:books: [PSR-2][psr-2]: 5.2. switch, case_  
+_:books: [PSR-12][psr-12]: 5.2. switch, case_
+
+#### 10.4.3. Non-empty `case` body fall-through
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+There MUST be a `// no break` comment when fall-through is intentional in a
+non-empty `case` body.
+
+_:books: [PSR-2][psr-2]: 5.2. switch, case_  
+_:books: [PSR-12][psr-12]: 5.2. switch, case_
+
+#### 10.4.3. `switch` terminating with no other code
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+There MUST be a comment in a `case` body, when it body only consists of
+a keyword that terminates the `switch` statement.
+
+### 10.5. `while`, `do while`
+
+A `while` control structure looks like the following:
+
+```php
+while ($expr) {
+    // body
+}
+```
+
+A `do while` control structure looks like the following:
+
+```php
+do {
+    // body
+} while ($expr);
+```
+
+_:books: [PSR-2][psr-2]: 5.2. while, do while_  
+_:books: [PSR-12][psr-12]: 5.2. while, do while_
+
+#### 10.5.1. `do while` formatting
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The keyword `while` (including the start of the expression) MUST be placed on
+the same line as the closing brace of the previous body.
+
+_:books: [PSR-2][psr-2]: 5.2. while, do while_  
+_:books: [PSR-12][psr-12]: 5.2. while, do while_
+
+### 10.6. `for`
+
+A `for` control structure looks like the following:
+
+```php
+for ($i = 0; $i < 10; $i++) {
+    // for body
+}
+```
+
+#### 10.6.1. `for` expressions formatting
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+There MUST be one space between each of the expressions of
+the `for` control structure.
+
+#### 10.6.2. Empty `for` expressions
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+The expressions of a `for` control structure MUST NOT be empty.
+An empty expression is implicitly considered `true`.
+
+#### 10.6.3. Combining multiple expression in a single expression
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+Each of the expressions can consists out of multiple expressions separated by
+comma, followed by a single space. The use of multiple expressions SHOULD be
+avoided, a single expression is preferred.
+
+### 10.7. `foreach`
+
+A `foreach` control structures looks like the following:
+
+```php
+foreach ($iterable as $value) {
+    // foreach body
+}
+
+foreach ($iterable as $key => $value) {
+    // foreach body
+}
+```
+
+_:books: [PSR-2][psr-2]: 5.5. foreach_  
+_:books: [PSR-12][psr-12]: 5.5. foreach_
+
+#### 10.7.1. Element's value usage
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+The value of the current element assigned on each iteration MUST be used in the
+body of the `foreach` control structure.
+
+#### 10.7.2. Assigning element's key formatting
+
+![silver] &#11034; &#11034; &#11034; &#11034;
+
+If the `foreach` control structure assigns the currently element's key value,
+the variable that is assigned MUST be followed by a single space, '=>', and
+again be followed by a single space.
+
+_:books: [PSR-2][psr-2]: 5.5. foreach_  
+_:books: [PSR-12][psr-12]: 5.5. foreach_
+
+#### 10.7.3. Assigning element's key usage
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+When assigning the element's key value in a variable on each iteration,
+then variable that gets assigned MUST be used inside the body of the `foreach`
+control structure.
+
+### 10.8. `try`, `catch`, `finally`
+
+A `try`, `catch`, `finally` control structure looks like the following:
+
+```php
+try {
+    // try body
+} catch (FirstThrowableType $e) {
+    // catch body
+} catch (SecondThrowableType $e | OtherThrowableType $e) {
+    // catch body
+} finally {
+    // finally body
+}
+```
+
+_:books: [PSR-2][psr-2]: 5.6. try, catch_  
+_:books: [PSR-12][psr-12]: 5.6. try, catch, finally_
+
+#### 10.8.1. Empty `catch` body
+
+![gold] &#11034; &#11034; &#11034; &#11034;
+
+The `catch` body MUST contain a comment when left empty intentionally.
+
+## 11. Functions
+
+## 12. Closures
+
+## 13. Classes, properties and methods
+
+## 14. Namespaces and use statements
+
+### 14.1. <TODO title>
 
 &#11034; &#11034; &#11034; &#11034; &#11034;
 
 A fully qualified class name has the following form:
 `\<NamespaceName>(\<SubNamespaceNames>)*\<ClassName>`.
 
-   - The fully qualified class name MUST have a top-level namespace name,
-   also known as a "vendor namespace".
+- The fully qualified class name MUST have a top-level namespace name,
+also known as a "vendor namespace".
 
-   - The fully qualified class name MAY have one or more sub-namespace
-   names.
+- The fully qualified class name MAY have one or more sub-namespace
+names.
 
-   - The fully qualified class name MUST have a terminating class name.
+- The fully qualified class name MUST have a terminating class name.
 
-   - Underscores have no special meaning in any portion of the fully
-   qualified class name.
+- Underscores have no special meaning in any portion of the fully
+qualified class name.
 
-   - Alphabetic characters in the fully qualified class name MAY be any
-      combination of lower case and upper case.
+- Alphabetic characters in the fully qualified class name MAY be any
+  combination of lower case and upper case.
 
-   - All class names MUST be referenced in a case-sensitive fashion.
+- All class names MUST be referenced in a case-sensitive fashion.
 
 _:books: [PSR-4][psr-4]: 2. Specification_
 
-### 13.1. Fully qualified use statements
+### 14.1. Fully qualified use statements
 
 ![gold] &#11034; &#11034; &#11034; &#11034;
 
@@ -491,7 +828,7 @@ Use statements MUST always be written using a
 _:books: [PSR-12][psr-12]: 3. Declare Statements, Namespaces, and
 Import Statements_
 
-### 13.1. No leading backslash
+### 14.1. No leading backslash
 
 ![gold] &#11034; &#11034; &#11034; &#11034;
 
@@ -501,7 +838,7 @@ be fully qualified.
 _:books: [PSR-12][psr-12]: 3. Declare Statements, Namespaces, and
 Import Statements_
 
-### 13.1. Compound namespaces depth
+### 14.1. Compound namespaces depth
 
 ![gold] &#11034; &#11034; &#11034; &#11034;
 
@@ -518,6 +855,7 @@ use Vendor\Package\Namespace\{
 ```
 
 And the following would not be allowed:
+
 ```php
 use Vendor\Package\Namespace\{
     SubnamespaceOne\AnotherNamespace\ClassA,
@@ -529,11 +867,11 @@ use Vendor\Package\Namespace\{
 _:books: [PSR-12][psr-12]: 3. Declare Statements, Namespaces, and
 Import Statements_
 
-## 14. Anonymous Classes
+## 15. Anonymous Classes
 
-## 15. PHPDoc
+## 16. PHPDoc
 
-## 16. Best practices
+## 17. Best practices
 
 -------------------------------------------------------------------------------
 
@@ -685,8 +1023,20 @@ _:books: [PSR-1][psr-1]: 4.2. Methods_
 [gold]: images/gold-emoji.png "Gold"
 [platinum]: images/platinum-emoji.png "Platinum"
 [diamond]: images/diamond-emoji.png "Diamond"
+[php-arithmetic-operators]: http://php.net/manual/en/language.operators.arithmetic.php
+[php-array-operators]: http://php.net/manual/en/language.operators.array.php
+[php-assignment-operators]: http://php.net/manual/en/language.operators.assignment.php
+[php-bitwise-operators]: http://php.net/manual/en/language.operators.bitwise.php
+[php-comparison-operators]: http://php.net/manual/en/language.operators.comparison.php
+[php-error-control-operators]: http://php.net/manual/en/language.operators.errorcontrol.php
+[php-execution-operators]: http://php.net/manual/en/language.operators.execution.php
+[php-function-shell-exec]: http://php.net/shell_exec
 [php-keywords]: http://php.net/manual/en/reserved.keywords.php
+[php-logical-operators]: http://php.net/manual/en/language.operators.logical.php
 [php-name-resolution-rules]: http://php.net/manual/en/language.namespaces.rules.php
+[php-string-operators]: http://php.net/manual/en/language.operators.string.php
+[php-type-operators]: http://php.net/manual/en/language.operators.type.php
+[php-traits]: http://php.net/manual/en/language.oop5.traits.php
 [php-types]: http://php.net/manual/en/language.types.intro.php
 [phpmd]: https://phpmd.org/
 [psr-0]: http://www.php-fig.org/psr/psr-0/
