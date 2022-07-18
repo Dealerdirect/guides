@@ -45,7 +45,7 @@ Just read every page in this repository and become awesome! :smile:
 
 - [Open  Source](open-source)
 
-  > Guides regrading open source development.
+  > Guides regarding open source development.
 
 - [Productivity](productivity)
 
